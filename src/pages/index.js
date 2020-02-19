@@ -20,8 +20,10 @@ export default ({ data }) => {
         <Row type="flex">
           <Title>{data.site.siteMetadata.site_header}</Title>
         </Row>
-        <Row type="flex" justify="center">
+        <Row type="flex">
           <Title level={2}>Full Stack Web Developer</Title>
+        </Row>
+        <Row type="flex">
           <Paragraph>
             Yo! I'm a developer who loves learning and using the latest in front
             end web development. My skill set includes experience with React,
@@ -42,18 +44,70 @@ export default ({ data }) => {
           </Paragraph>
         </Row>
       </section>
-      <Row type="flex">
-        <Title>About</Title>
-      </Row>
-      <Row type="flex" justify="center">
-        <Title level={2}>Full Stack Web Developer</Title>
-        <Paragraph>
-          Determined in building the best digital products that I can be proud
-          of. Committed to learning and sharing ideas with the team. Always
-          trying to be the best I can be.
-        </Paragraph>
-        <Paragraph>SKILLS GO HERE</Paragraph>
-      </Row>
+      <section>
+        <Row type="flex">
+          <Title>About</Title>
+        </Row>
+        <Row type="flex">
+          <Title level={2}>Full Stack Web Developer</Title>
+        </Row>
+        <Row type="flex">
+          <Paragraph>
+            Determined in building the best digital products that I can be proud
+            of. Committed to learning and sharing ideas with the team. Always
+            trying to be the best I can be.
+          </Paragraph>
+          <Paragraph>SKILLS GO HERE</Paragraph>
+        </Row>
+      </section>
+      <section>
+        <Row type="flex">
+          <Title>Experience</Title>
+        </Row>
+        <Row type="flex">
+          <Paragraph>POSITIONS GO HERE</Paragraph>
+        </Row>
+      </section>
+      <section>
+        <Row type="flex">
+          <Title>References</Title>
+        </Row>
+        <Row type="flex">
+          <Paragraph>REFERENCES GO HERE</Paragraph>
+        </Row>
+      </section>
+      <section>
+        <Row type="flex">
+          <Title>Let's connect</Title>
+        </Row>
+        <Row type="flex">
+          <ul>
+            <li>
+              <a href="mailto:contact@jasonrundell.com">
+                contact@jasonrundell.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/jasonrundell"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/jasonrundell/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </Row>
+      </section>
     </Layout>
   )
 }
