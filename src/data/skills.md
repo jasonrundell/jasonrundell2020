@@ -1,0 +1,57 @@
+---
+skills:
+  - Accessibility
+  - Adobe Experience Manager
+  - Adobe Illustrator
+  - Adobe Photoshop
+  - Agility CMS
+  - Amazon EC2
+  - Amazon RDS
+  - Amazon Route 53
+  - Amazon Web Services (AWS)
+  - AngularJS
+  - Architecture
+  - Bootstrap
+  - CDN
+  - CircleCI
+  - Client Support
+  - Contentful
+  - CSS
+  - Documentation
+  - ESLint
+  - Facebook API
+  - Facebook Development
+  - Foresty.io
+  - Foundation
+  - Gatsby
+  - Git
+  - GitHub
+  - Google Maps API
+  - Google Places API
+  - GraphQL
+  - Grunt
+  - Gulp
+  - HTML
+  - JavaScript
+  - jQuery
+  - JSON
+  - LAMP
+  - Lighthouse
+  - Netlify CMS
+  - Netlify
+  - NPM
+  - Parcel
+  - Progessive Web Apps (PWA)
+  - Project Management
+  - React Hooks
+  - React
+  - Responsive Design
+  - SASS
+  - Slack API
+  - Travis
+  - Ubuntu
+  - Webhooks
+  - WordPress
+  - Yarn
+  - MySQL
+---

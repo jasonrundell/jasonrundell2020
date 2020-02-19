@@ -1,0 +1,66 @@
+{
+  "name": "jasonrundell2020",
+  "private": true,
+  "description": "Jason Rundel's personal site. Developed in 2020.",
+  "version": "1.0.0",
+  "author": "Jason Rundell <jason.rundell@gmail.com>",
+  "dependencies": {
+    "antd": "^3.26.7",
+    "gatsby": "^2.13.57",
+    "gatsby-image": "^2.2.8",
+    "gatsby-plugin-algolia": "^0.3.3",
+    "gatsby-plugin-manifest": "^2.2.5",
+    "gatsby-plugin-offline": "^2.2.5",
+    "gatsby-plugin-react-axe": "^0.2.2",
+    "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby-plugin-sass": "^2.1.6",
+    "gatsby-plugin-sharp": "^2.2.11",
+    "gatsby-remark-images": "^3.1.8",
+    "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-transformer-remark": "^2.6.12",
+    "gatsby-transformer-sharp": "^2.2.6",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "babel-preset-gatsby": "^0.2.8",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.1.0",
+    "husky": "^3.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "normalize.css": "^8.0.1",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.9.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run test && gatsby build",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "test": "jest",
+    "newtest": "jest -u",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonrundell/gatsby-ant-site"
+  },
+  "bugs": {
+    "url": "https://github.com/jasonrundell/gatsby-ant-site/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run newtest"
+    }
+  }
+}

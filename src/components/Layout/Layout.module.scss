@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.menu {
+  display: none;
+  @media (min-width: $tabletBreakpoint) {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  @media (min-width: $tabletBreakpoint) {
+    display: none;
+  }
+}
+
+.mobile-menu__button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.site-name {
+  float: left;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  &:visited {
+    color: #fff;
+  }
+}
+
+.footer {
+  width: 100%;
+}
