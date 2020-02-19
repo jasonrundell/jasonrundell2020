@@ -49,9 +49,6 @@ export default ({ data }) => {
           <Title>About</Title>
         </Row>
         <Row type="flex">
-          <Title level={2}>Full Stack Web Developer</Title>
-        </Row>
-        <Row type="flex">
           <Paragraph>
             Determined in building the best digital products that I can be proud
             of. Committed to learning and sharing ideas with the team. Always
