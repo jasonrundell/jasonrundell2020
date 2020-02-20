@@ -21,7 +21,7 @@ skills:
   - ESLint
   - Facebook API
   - Facebook Development
-  - Foresty.io
+  - Forestry.io
   - Foundation
   - Gatsby
   - Git
