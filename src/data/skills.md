@@ -1,5 +1,7 @@
 ---
+id: skills
 skills:
+  - Contentful
   - Accessibility
   - Adobe Experience Manager
   - Adobe Illustrator
@@ -15,7 +17,6 @@ skills:
   - CDN
   - CircleCI
   - Client Support
-  - Contentful
   - CSS
   - Documentation
   - ESLint

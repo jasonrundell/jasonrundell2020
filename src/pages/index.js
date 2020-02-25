@@ -4,6 +4,7 @@ import { Typography, Row } from 'antd'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import Skills from '../components/Skills'
 
 const { Title, Paragraph } = Typography
 
@@ -54,7 +55,9 @@ export default ({ data }) => {
             of. Committed to learning and sharing ideas with the team. Always
             trying to be the best I can be.
           </Paragraph>
-          <Paragraph>SKILLS GO HERE</Paragraph>
+        </Row>
+        <Row type="flex">
+          <Skills />
         </Row>
       </section>
       <section>

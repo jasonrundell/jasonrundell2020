@@ -11,10 +11,27 @@ h2,
 h3,
 h4 {
   &.ant-typography {
-    color: #333;
+    color: #050709;
   }
 }
 
 .ant-layout-footer {
+  color: #050709;
   background-color: transparent;
+}
+
+.ant-typography {
+  color: #1c2833;
+}
+
+::selection {
+  color: #dce1e9;
+  background-color: #050709;
+}
+
+a {
+  color: #00008b;
+  &:hover {
+    color: #1f3a93;
+  }
 }
