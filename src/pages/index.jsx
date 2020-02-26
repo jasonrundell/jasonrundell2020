@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Components from '../components'
 
-const { Page, SEO, Layout, Typography, Skills } = Components
+const { Page, SEO, Layout, Typography, Skills, Section } = Components
 const { Grid, Row } = Layout
 const { Title, Paragraph } = Typography
 
@@ -22,7 +22,7 @@ export default ({ data }) => {
         largeColumnCount={3}
         breakInside="avoid"
       >
-        <section>
+        <Section>
           <Row>
             <Title>{data.site.siteMetadata.site_header}</Title>
           </Row>
@@ -49,8 +49,8 @@ export default ({ data }) => {
               embrace change, crave challenge, and love technology!
             </Paragraph>
           </Row>
-        </section>
-        <section>
+        </Section>
+        <Section>
           <Row>
             <Title>About</Title>
           </Row>
@@ -64,8 +64,8 @@ export default ({ data }) => {
           <Row>
             <Skills />
           </Row>
-        </section>
-        <section>
+        </Section>
+        <Section>
           <Row>
             <Title>Experience</Title>
           </Row>
@@ -77,16 +77,16 @@ export default ({ data }) => {
           <Row>
             <Paragraph>POSITIONS GO HERE</Paragraph>
           </Row>
-        </section>
-        <section>
+        </Section>
+        <Section>
           <Row>
             <Title>References</Title>
           </Row>
           <Row>
             <Paragraph>REFERENCES GO HERE</Paragraph>
           </Row>
-        </section>
-        <section>
+        </Section>
+        <Section>
           <Row>
             <Title>A little bit about me</Title>
           </Row>
@@ -99,8 +99,8 @@ export default ({ data }) => {
           <Row>
             <Skills />
           </Row>
-        </section>
-        <section>
+        </Section>
+        <Section>
           <Row>
             <Title>Let's connect</Title>
           </Row>
@@ -131,7 +131,7 @@ export default ({ data }) => {
               </li>
             </ul>
           </Row>
-        </section>
+        </Section>
       </Grid>
     </Page>
   )
