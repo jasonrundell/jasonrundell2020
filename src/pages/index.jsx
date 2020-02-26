@@ -1,16 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Typography, Row } from 'antd'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import Skills from '../components/Skills'
+import Components from '../components'
 
+const { Page, SEO, Layout, Typography, Skills } = Components
+const { Row } = Layout
 const { Title, Paragraph } = Typography
 
 export default ({ data }) => {
   return (
-    <Layout title={data.site.siteMetadata.site_header}>
+    <Page title={data.site.siteMetadata.site_header}>
       <SEO
         title={`${data.site.siteMetadata.title} | Home`}
         description={data.site.siteMetadata.description}
@@ -18,13 +17,13 @@ export default ({ data }) => {
         lang={data.site.siteMetadata.lang}
       />
       <section>
-        <Row type="flex">
+        <Row>
           <Title>{data.site.siteMetadata.site_header}</Title>
         </Row>
-        <Row type="flex">
+        <Row>
           <Title level={2}>Full Stack Web Developer</Title>
         </Row>
-        <Row type="flex">
+        <Row>
           <Paragraph>
             Yo! I'm a developer who loves learning and using the latest in front
             end web development. My skill set includes experience with React,
@@ -46,41 +45,41 @@ export default ({ data }) => {
         </Row>
       </section>
       <section>
-        <Row type="flex">
+        <Row>
           <Title>About</Title>
         </Row>
-        <Row type="flex">
+        <Row>
           <Paragraph>
             Determined in building the best digital products that I can be proud
             of. Committed to learning and sharing ideas with the team. Always
             trying to be the best I can be.
           </Paragraph>
         </Row>
-        <Row type="flex">
+        <Row>
           <Skills />
         </Row>
       </section>
       <section>
-        <Row type="flex">
+        <Row>
           <Title>Experience</Title>
         </Row>
-        <Row type="flex">
+        <Row>
           <Paragraph>POSITIONS GO HERE</Paragraph>
         </Row>
       </section>
       <section>
-        <Row type="flex">
+        <Row>
           <Title>References</Title>
         </Row>
-        <Row type="flex">
+        <Row>
           <Paragraph>REFERENCES GO HERE</Paragraph>
         </Row>
       </section>
       <section>
-        <Row type="flex">
+        <Row>
           <Title>Let's connect</Title>
         </Row>
-        <Row type="flex">
+        <Row>
           <ul>
             <li>
               <a href="mailto:contact@jasonrundell.com">
@@ -108,7 +107,7 @@ export default ({ data }) => {
           </ul>
         </Row>
       </section>
-    </Layout>
+    </Page>
   )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Layout from '../../components/Layout'
+import Page from '../../components/Page'
 import SEO from '../../components/SEO'
 
 export default ({ data }) => (
-  <Layout title={data.site.siteMetadata.title}>
+  <Page title={data.site.siteMetadata.title}>
     <SEO
       title={`${data.site.siteMetadata.title} | 404 Page not found`}
       description={data.site.siteMetadata.description}
@@ -15,7 +15,7 @@ export default ({ data }) => (
     <h1>Not found</h1>
     <p>Sorry folks, nothing here to see.</p>
     <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  </Page>
 )
 
 export const pageQuery = graphql`
