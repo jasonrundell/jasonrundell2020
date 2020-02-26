@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import TagsList from '../TagsList'
 
 const Skills = ({ data }) => {
-  console.log('data', data)
   return <TagsList tags={data.markdownRemark.frontmatter.skills} />
 }
 

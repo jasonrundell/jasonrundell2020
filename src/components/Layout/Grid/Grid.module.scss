@@ -1,0 +1,35 @@
+.root {
+  column-count: 1;
+}
+
+@for $i from 1 through 12 {
+  .col--#{$i} {
+    columns: $i;
+  }
+  .col--medium--#{$i} {
+    @media (min-width: $mediumBreakpoint) {
+      columns: $i;
+    }
+  }
+  .col--large--#{$i} {
+    @media (min-width: $largeBreakpoint) {
+      columns: $i;
+    }
+  }
+}
+
+.break-inside__auto {
+  article,
+  div,
+  section {
+    break-inside: auto;
+  }
+}
+
+.break-inside__avoid {
+  article,
+  div,
+  section {
+    break-inside: avoid;
+  }
+}
