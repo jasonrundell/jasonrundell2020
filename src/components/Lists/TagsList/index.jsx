@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Tag from '../Tag'
+import Tag from '../../Tag'
 
 import styles from './TagsList.module.scss'
 
@@ -10,8 +10,8 @@ const TagsList = ({ tags, orderBy }) => {
   return (
     <ul className={styles.root}>
       {tags.map(tag => (
-        <li className={styles.listItem} key={tag}>
-          <Tag text={tag} />
+        <li className={styles.listItem} key={tag.id}>
+          <Tag text={tag.text} />
         </li>
       ))}
     </ul>

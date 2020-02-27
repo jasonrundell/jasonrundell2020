@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Components from '../components'
 
-const { Page, SEO, Layout, Typography, Skills, Section } = Components
+const { Layout, Page, Quote, Section, SEO, Skills, Typography } = Components
 const { Grid, Row } = Layout
 const { Title, Paragraph } = Typography
 
@@ -98,6 +98,18 @@ export default ({ data }) => {
           </Row>
           <Row>
             <Skills />
+          </Row>
+        </Section>
+        <Section>
+          <Row>
+            <Title>Quotes I believe in</Title>
+          </Row>
+          <Row>
+            <Quote
+              footerPrefix={`This thought just came out of me one day and I'm not sure who said it first. If you know, please do inform me!`}
+            >
+              <Paragraph>The first media query is no media query.</Paragraph>
+            </Quote>
           </Row>
         </Section>
         <Section>

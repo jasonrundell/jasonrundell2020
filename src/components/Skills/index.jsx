@@ -1,21 +1,56 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import TagsList from '../TagsList'
+import Lists from '../Lists'
+
+const { UnorderedList } = Lists
 
 const Skills = ({ data }) => {
-  return <TagsList tags={data.markdownRemark.frontmatter.skills} />
+  const edges = data.allMarkdownRemark.edges
+  const allSkills = [...edges]
+  let categories = []
+  let skills = []
+
+  allSkills.forEach(category => {
+    categories.push(category.node.frontmatter.category)
+  })
+
+  allSkills.forEach(skill => {
+    skills.push(skill.node.frontmatter)
+  })
+
+  return (
+    <UnorderedList items={categories}>
+      <ul>
+        {skills.map(item => (
+          <li key={item.id}>
+            {item.name} / {item.years_of_experience} / {item.expertise_level}
+          </li>
+        ))}
+      </ul>
+    </UnorderedList>
+  )
 }
 
 export default props => (
   <StaticQuery
     query={graphql`
-      query {
-        markdownRemark(frontmatter: { id: { eq: "skills" } }) {
-          id
-          frontmatter {
-            id
-            skills
+      {
+        allMarkdownRemark(
+          filter: { frontmatter: { parent_id: { eq: "skills" } } }
+          sort: { order: ASC, fields: frontmatter___category }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                category
+                id
+                name
+                parent_id
+                expertise_level
+                years_of_experience
+              }
+            }
           }
         }
       }
@@ -25,10 +60,8 @@ export default props => (
 )
 Skills.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape({
-        skills: PropTypes.array.isRequired,
-      }).isRequired,
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object).isRequired,
     }).isRequired,
   }).isRequired,
 }
