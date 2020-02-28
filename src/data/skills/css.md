@@ -1,7 +1,7 @@
 ---
-id: json
+id: css
 parent_id: skills
-category: Data
-name: JSON
+category: Front end
+name: CSS
 expertise_level: Expert
 ---

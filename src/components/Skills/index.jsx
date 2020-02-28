@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import Lists from '../Lists'
 
-const { UnorderedList } = Lists
+import onlyUnique from '../../utils/unique'
 
 const Skills = ({ data }) => {
   const edges = data.allMarkdownRemark.edges
@@ -15,20 +14,40 @@ const Skills = ({ data }) => {
     categories.push(category.node.frontmatter.category)
   })
 
+  // I only want the unique categories
+  const uniqueCategories = categories.filter(onlyUnique)
+
   allSkills.forEach(skill => {
     skills.push(skill.node.frontmatter)
   })
 
   return (
-    <UnorderedList items={categories}>
-      <ul>
-        {skills.map(item => (
-          <li key={item.id}>
-            {item.name} / {item.years_of_experience} / {item.expertise_level}
-          </li>
-        ))}
-      </ul>
-    </UnorderedList>
+    <>
+      {uniqueCategories.map((parentCategory, index) => {
+        return (
+          <ul key={index}>
+            <li>
+              {parentCategory}
+              <ul>
+                {skills.map(item => {
+                  const { id, name, category, expertise_level } = item
+
+                  if (parentCategory === category) {
+                    return (
+                      <li key={id}>
+                        {name} / {expertise_level}
+                      </li>
+                    )
+                  } else {
+                    return null
+                  }
+                })}
+              </ul>
+            </li>
+          </ul>
+        )
+      })}
+    </>
   )
 }
 
@@ -48,7 +67,6 @@ export default props => (
                 name
                 parent_id
                 expertise_level
-                years_of_experience
               }
             }
           }

@@ -1,0 +1,68 @@
+categories: 
+  - Infrastructure
+  - Front end
+  - CMS and Generators
+  - APIs
+  - Data
+  - Back end
+  - Testing and linting
+  - Versioning
+  - Build tools
+  - Design
+  - Code editors
+  - Project management
+
+  - Contentful
+  - Accessibility
+  - Adobe Experience Manager
+  - Adobe Illustrator
+  - Adobe Photoshop
+  - Agility CMS
+  - Amazon EC2
+  - Amazon RDS
+  - Amazon Route 53
+  - Amazon Web Services (AWS)
+  - AngularJS
+  - Architecture
+  - Bootstrap
+  - CDN
+  - CircleCI
+  - Client Support
+  - CSS
+  - Documentation
+  - ESLint
+  - Facebook API
+  - Facebook Development
+  - Forestry.io
+  - Foundation
+  - Gatsby
+  - Git
+  - GitHub
+  - Google Maps API
+  - Google Places API
+  - GraphQL
+  - Grunt
+  - Gulp
+  - HTML
+  - JavaScript
+  - jQuery
+  - JSON
+  - LAMP
+  - Lighthouse
+  - Netlify CMS
+  - Netlify
+  - NPM
+  - Parcel
+  - Progessive Web Apps (PWA)
+  - Project Management
+  - React Hooks
+  - React
+  - Responsive Design
+  - SASS
+  - Slack API
+  - Travis
+  - Ubuntu
+  - Webhooks
+  - WordPress
+  - Yarn
+  - MySQL

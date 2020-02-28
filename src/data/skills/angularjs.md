@@ -1,7 +1,7 @@
 ---
-id: react
+id: angularjs
 parent_id: skills
 category: Front end
-name: React
+name: AngularJS
 expertise_level: Intermediate
 ---

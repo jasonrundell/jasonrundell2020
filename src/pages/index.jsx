@@ -96,9 +96,6 @@ export default ({ data }) => {
               about, etc.
             </Paragraph>
           </Row>
-          <Row>
-            <Skills />
-          </Row>
         </Section>
         <Section>
           <Row>

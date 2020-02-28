@@ -1,7 +1,7 @@
 ---
-id: react
+id: ec2
 parent_id: skills
-category: Front end
-name: React
+category: Infrastructure
+name: Amazon EC2
 expertise_level: Intermediate
 ---
