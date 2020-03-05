@@ -32,9 +32,7 @@ export default ({ data }) => {
           <Row>
             <Paragraph>
               Yo! I'm a developer who loves learning and using the latest in
-              front end web development. My skill set includes experience with
-              React, Node.js, Gulp, Grunt, PHP, MySQL, SASS, CSS, HTML,
-              JavaScript, and Amazon Web Services (just to name a few).
+              front end web development.
             </Paragraph>
             <Paragraph>
               My love of building web experiences started in my high school’s
