@@ -86,17 +86,6 @@ export default ({ data }) => {
         </Section>
         <Section>
           <Row>
-            <Title>A little bit about me</Title>
-          </Row>
-          <Row>
-            <Paragraph>
-              Air Soft, Ultimate Frisbee, UI/UX passion, what I'm most excited
-              about, etc.
-            </Paragraph>
-          </Row>
-        </Section>
-        <Section>
-          <Row>
             <Title>Quotes I believe in</Title>
           </Row>
           <Row>
