@@ -4,6 +4,9 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import onlyUnique from '../../utils/unique'
 
+// CSS
+import styles from './Skills.module.scss'
+
 const Skills = ({ data }) => {
   const edges = data.allMarkdownRemark.edges
   const allSkills = [...edges]
@@ -25,16 +28,16 @@ const Skills = ({ data }) => {
     <>
       {uniqueCategories.map((parentCategory, index) => {
         return (
-          <ul key={index}>
+          <ul key={index} className={styles.list}>
             <li>
               {parentCategory}
-              <ul>
+              <ul className={styles.list}>
                 {skills.map(item => {
                   const { id, name, category, expertise_level } = item
 
                   if (parentCategory === category) {
                     return (
-                      <li key={id}>
+                      <li key={id} className={styles.item}>
                         {name} / {expertise_level}
                       </li>
                     )
