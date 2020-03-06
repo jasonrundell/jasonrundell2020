@@ -8301,10 +8301,10 @@ jpeg-js@^0.3.4:
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.7.tgz#471a89d06011640592d314158608690172b1028d"
   integrity sha512-9IXdWudL61npZjvLuVe/ktHiA41iE8qFyLB+4VDTblEsWBzeg8WQTlktdUK4CdncUqtUgUg0bbOmTE2bKBKaBQ==
 
-jrun-normalize@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/jrun-normalize/-/jrun-normalize-8.0.2.tgz#4c89b989548b3d1527f0a4288dacd6f8d0ac5bae"
-  integrity sha512-LSM8Vbv3r7R1KWPDVtUOf2/q+N5HCQ7EiMVKp9Q9nTVqU4PExZdLzoc9WA3Kr9+ON7cuZFNneM1NRJxJabkVrw==
+jrun-normalize@^9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/jrun-normalize/-/jrun-normalize-9.1.1.tgz#d1539a61557ac79c0445ee6093b72ceb6e38ec79"
+  integrity sha512-IqE/cqXMDYSedxJ19dL3aBAyxx9cmaNjnJuGm9aWRQYAaWzTsUSd6lLW69ciw3Pp9eDerMQW1pe7zGxc4flkkg==
 
 js-base64@^2.1.8:
   version "2.5.2"
