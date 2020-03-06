@@ -10,6 +10,7 @@ import Main from './Main'
 import Page from './Page'
 import Positions from './Positions'
 import Quote from './Quote'
+import References from './References'
 import Section from './Section'
 import SEO from './SEO'
 import Skills from './Skills'
@@ -31,6 +32,7 @@ export default {
   Page,
   Positions,
   Quote,
+  References,
   Section,
   SEO,
   Skills,

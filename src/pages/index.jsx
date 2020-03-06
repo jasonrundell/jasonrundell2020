@@ -9,6 +9,7 @@ const {
   Box,
   Quote,
   Positions,
+  References,
   Section,
   SEO,
   Skills,
@@ -105,7 +106,7 @@ export default ({ data }) => {
               <Title>References</Title>
             </Row>
             <Row>
-              <Paragraph>REFERENCES GO HERE</Paragraph>
+              <References />
             </Row>
           </Box>
         </Section>

@@ -1,4 +1,6 @@
 ---
+id: rina
+parent_id: references
 quote:
   Jason is an extremely detail-oriented person who was an absolute pleasure to
   work with. He always provides creative ideas on how things can be completed

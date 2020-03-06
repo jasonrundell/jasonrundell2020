@@ -1,4 +1,6 @@
 ---
+id: gregg
+parent_id: references
 quote:
   Jason brings a creativity to technology rarely seen in many developers ...
   Jason continues to be a resource that I count on not only from a development
