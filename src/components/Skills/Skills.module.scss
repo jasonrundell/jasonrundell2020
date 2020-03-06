@@ -1,10 +1,25 @@
 .list {
-  margin-left: $normalUnit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: $normalUnit;
   margin-bottom: $normalUnit;
   list-style: none;
 }
 
 .item {
-  margin-left: $normalUnit;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   font-size: $smallUnit;
+  justify-content: space-between;
+
+  span {
+    font-size: $smallUnit;
+    flex: 1;
+  }
+}
+
+.attribute {
+  color: purple;
 }

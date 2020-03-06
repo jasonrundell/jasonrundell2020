@@ -38,7 +38,10 @@ const Skills = ({ data }) => {
                   if (parentCategory === category) {
                     return (
                       <li key={id} className={styles.item}>
-                        {name} / {expertise_level}
+                        <span>{name}</span>
+                        <span className={styles.attribute}>
+                          {expertise_level}
+                        </span>
                       </li>
                     )
                   } else {
