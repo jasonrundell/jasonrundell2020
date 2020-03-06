@@ -6,9 +6,9 @@ import Components from '../components'
 const {
   Layout,
   Page,
-  Card,
   Box,
   Quote,
+  Positions,
   Section,
   SEO,
   Skills,
@@ -94,7 +94,7 @@ export default ({ data }) => {
               </Paragraph>
             </Row>
             <Row>
-              <Paragraph>POSITIONS GO HERE</Paragraph>
+              <Positions />
             </Row>
           </Box>
         </Section>

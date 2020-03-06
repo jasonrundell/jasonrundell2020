@@ -8,6 +8,7 @@ import Layout from './Layout'
 import Lists from './Lists'
 import Main from './Main'
 import Page from './Page'
+import Positions from './Positions'
 import Quote from './Quote'
 import Section from './Section'
 import SEO from './SEO'
@@ -28,6 +29,7 @@ export default {
   Lists,
   Main,
   Page,
+  Positions,
   Quote,
   Section,
   SEO,

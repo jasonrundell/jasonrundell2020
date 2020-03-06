@@ -1,4 +1,6 @@
 ---
+id: 52-pickup
+parent_id: positions
 role: Senior Full Stack Web Developer
 company: 52 Pick-Up Inc.
 start_date: August 2013

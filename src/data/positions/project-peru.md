@@ -1,4 +1,6 @@
 ---
+id: project-peru
+parent_id: positions
 role: Full Stack Web Developer (volunteer)
 company: Project Peru
 start_date: March 2008

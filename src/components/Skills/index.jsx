@@ -3,9 +3,12 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import onlyUnique from '../../utils/unique'
+import Lists from '../Lists'
 
 // CSS
 import styles from './Skills.module.scss'
+
+const { OrderedList } = Lists
 
 const Skills = ({ data }) => {
   const edges = data.allMarkdownRemark.edges
@@ -26,6 +29,10 @@ const Skills = ({ data }) => {
 
   return (
     <>
+      <h3>Legend:</h3>
+      <OrderedList
+        items={['Expert', 'Advanced', 'Intermediate', 'Recreational']}
+      />
       {uniqueCategories.map((parentCategory, index) => {
         return (
           <ul key={index} className={styles.list}>

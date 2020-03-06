@@ -1,4 +1,6 @@
 ---
+id: medi-resource
+parent_id: positions
 role: Front End Web Developer
 company: MediResource Inc.
 start_date: April 2014

@@ -1,4 +1,6 @@
 ---
+id: intuit
+parent_id: positions
 role: Senior Front End Web Developer
 company: Intuit
 start_date: July 2019
