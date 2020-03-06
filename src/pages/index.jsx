@@ -3,7 +3,17 @@ import { graphql } from 'gatsby'
 
 import Components from '../components'
 
-const { Layout, Page, Quote, Section, SEO, Skills, Typography } = Components
+const {
+  Layout,
+  Page,
+  Card,
+  Box,
+  Quote,
+  Section,
+  SEO,
+  Skills,
+  Typography,
+} = Components
 const { Grid, Row } = Layout
 const { Title, Paragraph } = Typography
 
@@ -23,36 +33,39 @@ export default ({ data }) => {
         breakInside="avoid"
       >
         <Section>
-          <Row>
-            <Title>{data.site.siteMetadata.site_header}</Title>
-          </Row>
-          <Row>
-            <Title level={2}>Full Stack Web Developer</Title>
-          </Row>
-          <Row>
-            <Paragraph>
-              Hello. I'm a developer who loves learning and using the latest in
-              front end web development. My skill set includes experience with
-              React, Gatsby, AEM, Contentful, WordPress, Git, Gulp, Grunt,
-              Parcel, PHP, MySQL, SASS, CSS, HTML, JavaScript, and Amazon Web
-              Services.
-            </Paragraph>
-            <Paragraph>
-              My love of building web experiences started in my high school’s
-              library in 1997 with GeoCities and it’s been rewarding ever since!
-              As you can imagine, with over 20 years of love for the web, I have
-              been a part of a wide variety of web projects: from iframes, to
-              Flash, WordPress multisites, jQuery Mobile, custom CMS
-              applications, a Facebook contest platform, React design systems,
-              and now JAMstack with Gatsby and headless CMSs. Whatever the
-              latest trend is, I’m either deeply involved or experimenting with
-              it in my spare time. My skills and experiences are deep,
-              wide-ranging, and I am always seeking new best practices and
-              methodologies. I embrace change, crave challenge, and love
-              technology!
-            </Paragraph>
-          </Row>
+          <Box>
+            <Row>
+              <Title>{data.site.siteMetadata.site_header}</Title>
+            </Row>
+            <Row>
+              <Title level={2}>Full Stack Web Developer</Title>
+            </Row>
+            <Row>
+              <Paragraph>
+                Hello. I'm a developer who loves learning and using the latest
+                in front end web development. My skill set includes experience
+                with React, Gatsby, AEM, Contentful, WordPress, Git, Gulp,
+                Grunt, Parcel, PHP, MySQL, SASS, CSS, HTML, JavaScript, and
+                Amazon Web Services.
+              </Paragraph>
+              <Paragraph>
+                My love of building web experiences started in my high school’s
+                library in 1997 with GeoCities and it’s been rewarding ever
+                since! As you can imagine, with over 20 years of love for the
+                web, I have been a part of a wide variety of web projects: from
+                iframes, to Flash, WordPress multisites, jQuery Mobile, custom
+                CMS applications, a Facebook contest platform, React design
+                systems, and now JAMstack with Gatsby and headless CMSs.
+                Whatever the latest trend is, I’m either deeply involved or
+                experimenting with it in my spare time. My skills and
+                experiences are deep, wide-ranging, and I am always seeking new
+                best practices and methodologies. I embrace change, crave
+                challenge, and love technology!
+              </Paragraph>
+            </Row>
+          </Box>
         </Section>
+
         <Section>
           <Row>
             <Title>Seasoned and Capable</Title>
@@ -68,70 +81,82 @@ export default ({ data }) => {
             <Skills />
           </Row>
         </Section>
+
         <Section>
-          <Row>
-            <Title>Experience</Title>
-          </Row>
-          <Row>
-            <Paragraph>
-              Logos of: LoyaltyOne, Intuit, AIR MILES, QuickBooks, Flight Centre
-            </Paragraph>
-          </Row>
-          <Row>
-            <Paragraph>POSITIONS GO HERE</Paragraph>
-          </Row>
+          <Box>
+            <Row>
+              <Title>Experience</Title>
+            </Row>
+            <Row>
+              <Paragraph>
+                Logos of: LoyaltyOne, Intuit, AIR MILES, QuickBooks, Flight
+                Centre
+              </Paragraph>
+            </Row>
+            <Row>
+              <Paragraph>POSITIONS GO HERE</Paragraph>
+            </Row>
+          </Box>
+        </Section>
+
+        <Section>
+          <Box>
+            <Row>
+              <Title>References</Title>
+            </Row>
+            <Row>
+              <Paragraph>REFERENCES GO HERE</Paragraph>
+            </Row>
+          </Box>
         </Section>
         <Section>
-          <Row>
-            <Title>References</Title>
-          </Row>
-          <Row>
-            <Paragraph>REFERENCES GO HERE</Paragraph>
-          </Row>
+          <Box>
+            <Row>
+              <Title>Quotes I believe in</Title>
+            </Row>
+            <Row>
+              <Quote
+                footerPrefix={`This thought just came out of me one day and I'm not sure who said it first. If you know, please do inform me!`}
+              >
+                <Paragraph>The first media query is no media query.</Paragraph>
+              </Quote>
+            </Row>
+          </Box>
         </Section>
+
         <Section>
-          <Row>
-            <Title>Quotes I believe in</Title>
-          </Row>
-          <Row>
-            <Quote
-              footerPrefix={`This thought just came out of me one day and I'm not sure who said it first. If you know, please do inform me!`}
-            >
-              <Paragraph>The first media query is no media query.</Paragraph>
-            </Quote>
-          </Row>
-        </Section>
-        <Section>
-          <Row>
-            <Title>Let's connect</Title>
-          </Row>
-          <Row>
-            <ul>
-              <li>
-                <a href="mailto:contact@jasonrundell.com">
-                  contact@jasonrundell.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/jasonrundell"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/jasonrundell/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </Row>
+          <Box>
+            <Row>
+              <Title>Let's connect</Title>
+            </Row>
+            <Row>
+              <ul>
+                <li>
+                  <a href="mailto:contact@jasonrundell.com">
+                    contact@jasonrundell.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/jasonrundell"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/jasonrundell/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </Row>
+          </Box>
         </Section>
       </Grid>
     </Page>

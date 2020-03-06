@@ -1,4 +1,6 @@
 import Blockquote from './Blockquote'
+import Box from './Box'
+import Card from './Card'
 import Cite from './Cite'
 import Footer from './Footer'
 import Header from './Header'
@@ -17,6 +19,8 @@ import Typography from './Typography'
 
 export default {
   Blockquote,
+  Box,
+  Card,
   Cite,
   Footer,
   Header,
