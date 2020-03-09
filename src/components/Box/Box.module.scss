@@ -1,11 +1,11 @@
 .root {
-  padding: 1rem;
+  padding: $normalUnit;
 }
 
 .tight {
-  padding: 0.75rem;
+  padding: $smallUnit;
 }
 
 .roomy {
-  padding: 2rem;
+  padding: $xxLargeUnit;
 }
