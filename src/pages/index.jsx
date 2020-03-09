@@ -69,23 +69,6 @@ export default ({ data }) => {
         <Section>
           <Box>
             <Row>
-              <Title>Seasoned and Capable</Title>
-            </Row>
-            <Row>
-              <Paragraph>
-                Determined in building the best digital products that I can be
-                proud of. Committed to learning and sharing ideas with the team.
-                Always trying to be the best I can be.
-              </Paragraph>
-            </Row>
-            <Row>
-              <Skills />
-            </Row>
-          </Box>
-        </Section>
-        <Section>
-          <Box>
-            <Row>
               <Title>Experience</Title>
             </Row>
             <Row>
@@ -120,6 +103,30 @@ export default ({ data }) => {
               >
                 <Paragraph>The first media query is no media query.</Paragraph>
               </Quote>
+            </Row>
+          </Box>
+        </Section>
+      </Grid>
+      <Grid
+        columnCount={1}
+        mediumColumnCount={2}
+        largeColumnCount={2}
+        breakInside="avoid"
+      >
+        <Section>
+          <Box>
+            <Row>
+              <Title>Seasoned and Capable</Title>
+            </Row>
+            <Row>
+              <Paragraph>
+                Determined in building the best digital products that I can be
+                proud of. Committed to learning and sharing ideas with the team.
+                Always trying to be the best I can be.
+              </Paragraph>
+            </Row>
+            <Row>
+              <Skills />
             </Row>
           </Box>
         </Section>
