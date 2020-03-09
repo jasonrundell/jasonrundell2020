@@ -3,5 +3,5 @@ id: angularjs
 parent_id: skills
 category: Front end
 name: AngularJS
-expertise_level: Intermediate
+expertise_level: I
 ---

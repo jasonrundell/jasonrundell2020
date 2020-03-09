@@ -3,5 +3,5 @@ id: photoshop
 parent_id: skills
 category: Design
 name: Adobe Photoshop
-expertise_level: Proficient
+expertise_level: P
 ---
