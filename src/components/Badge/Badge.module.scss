@@ -1,0 +1,20 @@
+.root {
+  display: inline-flex;
+  border-radius: $xxSmallUnit;
+  background-color: $typeColor;
+  color: $backgroundColor;
+  width: $mediumUnit;
+  height: $mediumUnit;
+  font-size: $smallUnit;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+}
+
+.tight {
+  padding: 0.75rem;
+}
+
+.roomy {
+  padding: 2rem;
+}

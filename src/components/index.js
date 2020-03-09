@@ -1,3 +1,4 @@
+import Badge from './Badge'
 import Blockquote from './Blockquote'
 import Box from './Box'
 import Card from './Card'
@@ -20,6 +21,7 @@ import TagsList from './Lists/TagsList'
 import Typography from './Typography'
 
 export default {
+  Badge,
   Blockquote,
   Box,
   Card,
