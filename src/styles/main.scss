@@ -18,3 +18,31 @@ a {
     color: #1f3a93;
   }
 }
+
+h1 {
+  font-size: $xxLargeUnit;
+}
+
+h2 {
+  font-size: $largeUnit;
+}
+
+h3 {
+  font-size: $normalUnit;
+}
+
+h4 {
+  font-size: $smallUnit;
+}
+
+h5 {
+  font-size: $xSmallUnit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
