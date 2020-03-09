@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-import onlyUnique from '../../utils/unique'
+import Badge from '../Badge'
 import Lists from '../Lists'
+import onlyUnique from '../../utils/unique'
 
 // CSS
 import styles from './Skills.module.scss'
 
-const { OrderedList } = Lists
+const { BadgeList } = Lists
 
 const Skills = ({ data }) => {
   const edges = data.allMarkdownRemark.edges
@@ -27,17 +28,37 @@ const Skills = ({ data }) => {
     skills.push(skill.node.frontmatter)
   })
 
+  const legendList = [
+    {
+      id: 'expert',
+      icon: 'E',
+      label: 'Expert',
+    },
+    {
+      id: 'advanced',
+      icon: 'A',
+      label: 'Advanced',
+    },
+    {
+      id: 'proficient',
+      icon: 'P',
+      label: 'Proficient',
+    },
+    {
+      id: 'intermediate',
+      icon: 'I',
+      label: 'Intermediate',
+    },
+  ]
+
   return (
     <>
-      <h3>Legend:</h3>
-      <OrderedList
-        items={['Expert', 'Advanced', 'Intermediate', 'Recreational']}
-      />
+      <BadgeList list={legendList} isHorizontal />
       {uniqueCategories.map((parentCategory, index) => {
         return (
           <ul key={index} className={styles.list}>
             <li>
-              {parentCategory}
+              <h3 className={styles.title}>{parentCategory}</h3>
               <ul className={styles.list}>
                 {skills.map(item => {
                   const { id, name, category, expertise_level } = item
@@ -45,10 +66,8 @@ const Skills = ({ data }) => {
                   if (parentCategory === category) {
                     return (
                       <li key={id} className={styles.item}>
-                        <span>{name}</span>
-                        <span className={styles.attribute}>
-                          {expertise_level}
-                        </span>
+                        <Badge icon={expertise_level} />
+                        <span className={styles.itemText}>{name}</span>
                       </li>
                     )
                   } else {
