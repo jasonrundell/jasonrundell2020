@@ -3,7 +3,18 @@
   flex-direction: column;
   list-style: none;
   padding: 0;
+
+  .list-item {
+    display: block;
+    margin-bottom: $smallUnit;
+  }
 }
-.list-item {
-  display: block;
+
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .list-item {
+    margin-right: $smallUnit;
+  }
 }
