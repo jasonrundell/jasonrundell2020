@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Blockquote from '../Blockquote'
+
 // CSS
 import styles from './References.module.scss'
 
@@ -14,9 +16,8 @@ const References = ({ data }) => {
         {allReferences.map(position => {
           const { id, quote, cite_name, company } = position.node.frontmatter
           return (
-            <li key={id}>
-              {quote} {cite_name}, {company}
-              <blockquote>{quote}</blockquote>
+            <li key={id} className={styles.item}>
+              <Blockquote>{quote}</Blockquote>
               <cite>
                 - {cite_name} ({company})
               </cite>

@@ -8,14 +8,5 @@
 }
 
 .item {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  font-size: $smallUnit;
-  justify-content: space-between;
-
-  span {
-    font-size: $smallUnit;
-    flex: 1;
-  }
+  margin-bottom: $largeUnit;
 }
