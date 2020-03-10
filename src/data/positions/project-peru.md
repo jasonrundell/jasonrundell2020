@@ -1,5 +1,6 @@
 ---
 id: project-peru
+order_id: 1
 parent_id: positions
 role: Full Stack Web Developer (volunteer)
 company: Project Peru

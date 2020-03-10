@@ -1,5 +1,6 @@
 ---
 id: flight-centre
+order_id: 2
 parent_id: positions
 role: Full Stack Web Developer
 company: Flight Centre Ltd.
