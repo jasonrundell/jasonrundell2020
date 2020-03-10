@@ -30,7 +30,7 @@
     "husky": "^4.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
-    "jrun-normalize": "^9.1.1",
+    "jrun-normalize": "^9.2.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0"
   },
