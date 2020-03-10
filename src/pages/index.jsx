@@ -69,6 +69,40 @@ export default ({ data }) => {
         <Section>
           <Box>
             <Row>
+              <Title>Let's connect</Title>
+            </Row>
+            <Row>
+              <ul>
+                <li>
+                  <a href="mailto:contact@jasonrundell.com">
+                    contact@jasonrundell.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/jasonrundell"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/jasonrundell/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </Row>
+          </Box>
+        </Section>
+        <Section>
+          <Box>
+            <Row>
               <Title>Experience</Title>
             </Row>
             <Row>
@@ -109,14 +143,14 @@ export default ({ data }) => {
       </Grid>
       <Grid
         columnCount={1}
-        mediumColumnCount={2}
-        largeColumnCount={2}
+        mediumColumnCount={1}
+        largeColumnCount={1}
         breakInside="avoid"
       >
         <Section>
           <Box>
             <Row>
-              <Title>Seasoned and Capable</Title>
+              <Title>Tools & Technologies</Title>
             </Row>
             <Row>
               <Paragraph>
@@ -127,40 +161,6 @@ export default ({ data }) => {
             </Row>
             <Row>
               <Skills />
-            </Row>
-          </Box>
-        </Section>
-        <Section>
-          <Box>
-            <Row>
-              <Title>Let's connect</Title>
-            </Row>
-            <Row>
-              <ul>
-                <li>
-                  <a href="mailto:contact@jasonrundell.com">
-                    contact@jasonrundell.com
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/jasonrundell"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/jasonrundell/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
             </Row>
           </Box>
         </Section>
