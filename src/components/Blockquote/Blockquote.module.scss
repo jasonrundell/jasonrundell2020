@@ -1,0 +1,24 @@
+.root {
+  position: relative;
+  &::before {
+    display: inline;
+    position: absolute;
+    font-family: Times New Roman, Times, serif;
+    font-size: 3rem;
+    color: #9aaec6;
+    opacity: 0.8;
+    content: '❝';
+    top: -1.5rem;
+    left: -2.25rem;
+  }
+  &::after {
+    display: inline;
+    position: absolute;
+    font-family: Times New Roman, Times, serif;
+    font-size: 3rem;
+    color: #9aaec6;
+    opacity: 0.8;
+    content: '❞';
+    right: -1.5rem;
+  }
+}
