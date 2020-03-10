@@ -11,6 +11,12 @@
   align-items: center;
 }
 
+.inverse {
+  background-color: $backgroundColor;
+  color: $typeColor;
+  border: 1px solid $typeColor;
+}
+
 .tight {
   padding: 0.75rem;
 }
