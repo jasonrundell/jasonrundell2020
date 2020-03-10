@@ -56,7 +56,7 @@ const Skills = ({ data }) => {
   return (
     <>
       <Row>
-        <BadgeList list={legendList} isHorizontal />
+        <BadgeList list={legendList} isHorizontal isInverse />
       </Row>
       <Row>
         {uniqueCategories.map((parentCategory, index) => {
@@ -71,7 +71,7 @@ const Skills = ({ data }) => {
                     if (parentCategory === category) {
                       return (
                         <li key={id} className={styles.item}>
-                          <Badge icon={expertise_level} />
+                          <Badge icon={expertise_level} isInverse />
                           <span className={styles.itemText}>{name}</span>
                         </li>
                       )
