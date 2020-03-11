@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        data: `@import "./src/styles/globals.scss";`,
+        data: `@import "./src/styles/main.scss";`,
       },
     },
     {
