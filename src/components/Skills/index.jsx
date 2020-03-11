@@ -14,20 +14,20 @@ const { Grid, Row } = Layout
 const { BadgeList } = Lists
 
 const Skills = ({ data }) => {
-  const edges = data.allMarkdownRemark.edges
+  const edges = data.allContentfulSkills.edges
   const allSkills = [...edges]
   let categories = []
   let skills = []
 
   allSkills.forEach(category => {
-    categories.push(category.node.frontmatter.category)
+    categories.push(category.node.category)
   })
 
   // I only want the unique categories
   const uniqueCategories = categories.filter(onlyUnique)
 
   allSkills.forEach(skill => {
-    skills.push(skill.node.frontmatter)
+    skills.push(skill.node)
   })
 
   const legendList = [
@@ -71,12 +71,12 @@ const Skills = ({ data }) => {
                 <h3 className={styles.title}>{parentCategory}</h3>
                 <ul className={styles.list}>
                   {skills.map(item => {
-                    const { id, name, category, expertise_level } = item
+                    const { id, name, category, expertiseLevel } = item
 
                     if (parentCategory === category) {
                       return (
                         <li key={id} className={styles.item}>
-                          <Badge icon={expertise_level} isInverse />
+                          <Badge icon={expertiseLevel} isInverse />
                           <span className={styles.itemText}>{name}</span>
                         </li>
                       )
@@ -98,19 +98,13 @@ export default props => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(
-          filter: { frontmatter: { parent_id: { eq: "skills" } } }
-          sort: { order: ASC, fields: frontmatter___category }
-        ) {
+        allContentfulSkills(sort: { fields: category }) {
           edges {
             node {
-              frontmatter {
-                category
-                id
-                name
-                parent_id
-                expertise_level
-              }
+              id
+              category
+              name
+              expertiseLevel
             }
           }
         }
@@ -121,7 +115,7 @@ export default props => (
 )
 Skills.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allContentfulSkills: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object).isRequired,
     }).isRequired,
   }).isRequired,

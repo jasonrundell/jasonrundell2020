@@ -6,26 +6,20 @@ import { StaticQuery, graphql } from 'gatsby'
 import styles from './Positions.module.scss'
 
 const Positions = ({ data }) => {
-  const allPositions = data.allMarkdownRemark.edges
+  const allPositions = data.allContentfulPositions.edges
 
   return (
     <>
       <ul className={styles.list}>
         {allPositions.map(position => {
-          const {
-            id,
-            role,
-            company,
-            start_date,
-            end_date,
-          } = position.node.frontmatter
+          const { id, role, company, startDate, endDate } = position.node
           return (
             <li key={id} className={styles.item}>
               <h3 className={styles.role}>{role}</h3>
               <span className={styles.company}>{company}</span>
               <br />
-              <span className={styles.startDate}>{start_date}</span> -{' '}
-              <span className={styles.endDate}>{end_date}</span>
+              <span className={styles.startDate}>{startDate}</span> -{' '}
+              <span className={styles.endDate}>{endDate}</span>
             </li>
           )
         })}
@@ -38,21 +32,15 @@ export default props => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(
-          filter: { frontmatter: { parent_id: { eq: "positions" } } }
-          sort: { order: DESC, fields: frontmatter___order_id }
-        ) {
+        allContentfulPositions(sort: { fields: orderId, order: DESC }) {
           edges {
             node {
-              frontmatter {
-                id
-                order_id
-                parent_id
-                role
-                company
-                start_date
-                end_date
-              }
+              id
+              orderId
+              role
+              company
+              startDate
+              endDate
             }
           }
         }
@@ -63,7 +51,7 @@ export default props => (
 )
 Positions.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allContentfulPositions: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object).isRequired,
     }).isRequired,
   }).isRequired,

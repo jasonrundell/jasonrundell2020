@@ -5,7 +5,6 @@
   "author": "Jason Rundell <jason.rundell@gmail.com>",
   "dependencies": {
     "gatsby": "^2.19.39",
-    "gatsby-image": "^2.2.8",
     "gatsby-plugin-manifest": "^2.2.42",
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-react-axe": "^0.4.0",
@@ -13,6 +12,7 @@
     "gatsby-plugin-sass": "^2.1.29",
     "gatsby-plugin-sharp": "^2.4.11",
     "gatsby-remark-images": "^3.1.8",
+    "gatsby-source-contentful": "^2.1.95",
     "gatsby-source-filesystem": "^2.1.9",
     "gatsby-transformer-remark": "^2.6.53",
     "gatsby-transformer-sharp": "^2.2.6",

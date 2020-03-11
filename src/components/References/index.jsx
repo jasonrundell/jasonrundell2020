@@ -8,18 +8,23 @@ import Blockquote from '../Blockquote'
 import styles from './References.module.scss'
 
 const References = ({ data }) => {
-  const allReferences = data.allMarkdownRemark.edges
+  const allReferences = data.allContentfulReferences.edges
+
+  // console.log('REFERENCES', allReferences)
 
   return (
     <>
       <ul className={styles.list}>
         {allReferences.map(position => {
-          const { id, quote, cite_name, company } = position.node.frontmatter
+          const { id, citeName, company } = position.node
+          const quote = position.node.quote.content[0].content[0].value
+          // console.log(`${id}, ${quote}, ${citeName}, ${company}`)
+          // console.log(quote.content[0].content[0].value)
           return (
             <li key={id} className={styles.item}>
               <Blockquote>{quote}</Blockquote>
               <cite className={styles.cite}>
-                - {cite_name} ({company})
+                - {citeName} ({company})
               </cite>
             </li>
           )
@@ -33,19 +38,19 @@ export default props => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(
-          filter: { frontmatter: { parent_id: { eq: "references" } } }
-          sort: { order: ASC, fields: frontmatter___category }
-        ) {
+        allContentfulReferences(sort: { fields: id }) {
           edges {
             node {
-              frontmatter {
-                id
-                parent_id
-                quote
-                cite_name
-                company
+              id
+              quote {
+                content {
+                  content {
+                    value
+                  }
+                }
               }
+              citeName
+              company
             }
           }
         }
@@ -56,7 +61,7 @@ export default props => (
 )
 References.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allContentfulReferences: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object).isRequired,
     }).isRequired,
   }).isRequired,

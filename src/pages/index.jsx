@@ -22,8 +22,8 @@ export default ({ data }) => {
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <SEO
-        title={`${data.site.siteMetadata.title} | Home`}
-        description={data.site.siteMetadata.description}
+        title={`Jason Rundell - Full Stack Toronto Web Developer | Home | Home`}
+        description={`The official web site of Jason Rundell: A full stack web developer that loves the web!`}
         author={data.site.siteMetadata.author}
         lang={data.site.siteMetadata.lang}
       />
@@ -36,7 +36,7 @@ export default ({ data }) => {
         <Section>
           <Box>
             <Row>
-              <Title>{data.site.siteMetadata.site_header}</Title>
+              <Title>{data.site.siteMetadata.site_name}</Title>
             </Row>
             <Row>
               <Title level={2}>Full Stack Web Developer</Title>
@@ -173,11 +173,8 @@ export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
-        title
-        description
-        site_header
         author
-        lang
+        site_name
       }
     }
   }
