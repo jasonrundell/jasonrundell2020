@@ -29,8 +29,8 @@ export default ({ data }) => {
       />
       <Grid
         columnCount={1}
-        mediumColumnCount={2}
-        largeColumnCount={3}
+        mediumColumnCount={1}
+        largeColumnCount={1}
         breakInside="avoid"
       >
         <Section>
@@ -129,7 +129,7 @@ export default ({ data }) => {
         <Section>
           <Box>
             <Row>
-              <Title>Quotes I believe in</Title>
+              <Title>Quotes</Title>
             </Row>
             <Row>
               <Quote
