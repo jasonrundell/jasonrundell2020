@@ -6,7 +6,7 @@
 
   .list-item {
     display: block;
-    margin-bottom: $smallUnit;
+    margin-bottom: $sizeSmall;
   }
 }
 
@@ -15,6 +15,6 @@
   flex-wrap: wrap;
 
   .list-item {
-    margin-right: $smallUnit;
+    margin-right: $sizeSmall;
   }
 }

@@ -2,11 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: $normalUnit;
+  margin-bottom: $sizeNormal;
   padding: 0;
   list-style: none;
 }
 
 .item {
-  margin-bottom: $largeUnit;
+  margin-bottom: $sizeLarge;
+}
+
+.cite {
+  color: $accentColorPrime;
 }

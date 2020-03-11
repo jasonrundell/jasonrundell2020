@@ -8,12 +8,12 @@
 }
 
 .item {
-  margin-bottom: $largeUnit;
+  margin-bottom: $sizeLarge;
 }
 
 .role {
   margin-top: 0;
-  margin-bottom: $xxSmallUnit;
+  margin-bottom: $sizeSmallest;
 }
 
 .company {
@@ -22,5 +22,5 @@
 
 .startDate,
 .endDate {
-  font-size: $smallUnit;
+  font-size: $sizeSmall;
 }

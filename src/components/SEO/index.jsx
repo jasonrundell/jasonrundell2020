@@ -42,9 +42,12 @@ const SEO = props => (
         content: props.description,
       },
     ].concat(props.meta)}
+    bodyAttributes={{
+      class: 'theme__vitan',
+    }}
   >
     <link
-      href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
   </Helmet>

@@ -1,20 +1,20 @@
 .root {
   display: inline-flex;
-  border-radius: $xxSmallUnit;
-  background-color: $typeColor;
-  color: $backgroundColor;
-  width: $mediumUnit;
-  height: $mediumUnit;
-  font-size: $smallUnit;
+  border-radius: $sizeSmallest;
+  background-color: $bgColorPrime;
+  color: $accentColorPrime;
+  width: $sizeNormal;
+  height: $sizeNormal;
+  font-size: $sizeSmall;
   font-weight: 700;
   justify-content: center;
   align-items: center;
 }
 
 .inverse {
-  background-color: $backgroundColor;
-  color: $typeColor;
-  border: 1px solid $typeColor;
+  background-color: $accentColorPrime;
+  color: $bgColorPrime;
+  border: 1px solid $accentColorPrime;
 }
 
 .tight {

@@ -3,14 +3,14 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 0;
-  margin-bottom: $normalUnit;
+  margin-bottom: $sizeNormal;
   list-style: none;
   padding-left: 0;
 }
 
 .title {
   margin-top: 0;
-  margin-bottom: $xSmallUnit;
+  margin-bottom: $sizeSmaller;
   font-weight: 700;
 }
 
@@ -19,9 +19,9 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: $xxSmallUnit;
+  margin-bottom: $sizeSmallest;
   .item-text {
     flex: 1;
-    margin-left: $xxSmallUnit;
+    margin-left: $sizeSmallest;
   }
 }

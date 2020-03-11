@@ -18,7 +18,7 @@ const References = ({ data }) => {
           return (
             <li key={id} className={styles.item}>
               <Blockquote>{quote}</Blockquote>
-              <cite>
+              <cite className={styles.cite}>
                 - {cite_name} ({company})
               </cite>
             </li>

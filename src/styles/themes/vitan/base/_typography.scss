@@ -1,0 +1,124 @@
+/* 200, 300, 400, 400i, 500 */
+.font__regular {
+  font-family: 'Montserrat', 'HelveticaNeue-Light', 'Helvetica Neue Light',
+    'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.font__light {
+  font-family: 'Montserrat', 'HelveticaNeue-Light', 'Helvetica Neue Light',
+    'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.font__extralight {
+  font-family: 'Montserrat', 'HelveticaNeue-Light', 'Helvetica Neue Light',
+    'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+.font__medium {
+  font-family: 'Montserrat', 'HelveticaNeue-Light', 'Helvetica Neue Light',
+    'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+a,
+p,
+ul,
+li,
+blockquote,
+cite,
+header,
+footer {
+  @extend .font__regular;
+}
+
+em {
+  @extend .font__light;
+  font-style: italic;
+}
+
+p {
+  @extend .font__regular;
+  line-height: $lineHeightBase;
+  transition: all, 0.5s, ease;
+}
+
+h1 {
+  font-size: 2.375em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.625em;
+  @extend .font__light;
+}
+h5 {
+  font-size: 1.4em;
+}
+h6 {
+  font-size: 1.2em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .font__medium;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 1.25rem;
+  @media (min-width: 1024px) {
+    margin-bottom: 1.2rem;
+  }
+  transition: all, 0.5s, ease;
+  & + p {
+    margin-top: 0;
+  }
+}
+
+::selection {
+  color: $accentColorPrime;
+  background-color: $bgColorPrimeLighter;
+}
+
+a {
+  color: $accentColorPrime;
+  &:hover {
+    color: $accentColorLighter;
+  }
+}
+
+h1 {
+  font-size: $sizeLargest;
+}
+
+h2 {
+  font-size: $sizeLarge;
+}
+
+h3 {
+  font-size: $sizeNormal;
+}
+
+h4 {
+  font-size: $sizeSmall;
+}
+
+h5 {
+  font-size: $sizeSmaller;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
