@@ -11,11 +11,16 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link
-          href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap"
-          rel="stylesheet"
-        />
         {props.headComponents}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-3249909-1"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || [] function gtag(){' '}
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()) gtag('config', 'UA-3249909-1')
+        </script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
