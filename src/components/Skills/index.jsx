@@ -10,7 +10,7 @@ import onlyUnique from '../../utils/unique'
 // CSS
 import styles from './Skills.module.scss'
 
-const { Grid, Row } = Layout
+const { Box, Row } = Layout
 const { BadgeList } = Lists
 
 const Skills = ({ data }) => {
@@ -59,36 +59,33 @@ const Skills = ({ data }) => {
         <BadgeList list={legendList} isHorizontal isInverse />
       </Row>
       <Row>
-        <Grid
-          columnCount={2}
-          mediumColumnCount={2}
-          largeColumnCount={6}
-          breakInside="avoid"
-        >
-          {uniqueCategories.map((parentCategory, index) => {
-            return (
-              <div key={index} className={styles.list}>
-                <h3 className={styles.title}>{parentCategory}</h3>
-                <ul className={styles.list}>
-                  {skills.map(item => {
-                    const { id, name, category, expertiseLevel } = item
+        {uniqueCategories.map((parentCategory, index) => {
+          return (
+            <div key={index} className={styles.list}>
+              <h3 className={styles.title}>{parentCategory}</h3>
+              <ul className={styles.list}>
+                {skills.map(item => {
+                  const { id, name, category, expertiseLevel } = item
 
-                    if (parentCategory === category) {
-                      return (
-                        <li key={id} className={styles.item}>
+                  if (parentCategory === category) {
+                    return (
+                      <li key={id} className={styles.item}>
+                        <Box isTight>
                           <Badge icon={expertiseLevel} isInverse />
+                        </Box>
+                        <Box isTight>
                           <span className={styles.itemText}>{name}</span>
-                        </li>
-                      )
-                    } else {
-                      return null
-                    }
-                  })}
-                </ul>
-              </div>
-            )
-          })}
-        </Grid>
+                        </Box>
+                      </li>
+                    )
+                  } else {
+                    return null
+                  }
+                })}
+              </ul>
+            </div>
+          )
+        })}
       </Row>
     </>
   )

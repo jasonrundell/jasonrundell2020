@@ -3,26 +3,28 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Blockquote from '../Blockquote'
+import Contentful from '../Contentful'
 
 // CSS
 import styles from './References.module.scss'
 
+const { RichText } = Contentful
+
 const References = ({ data }) => {
   const allReferences = data.allContentfulReferences.edges
-
-  // console.log('REFERENCES', allReferences)
 
   return (
     <>
       <ul className={styles.list}>
-        {allReferences.map(position => {
-          const { id, citeName, company } = position.node
-          const quote = position.node.quote.content[0].content[0].value
-          // console.log(`${id}, ${quote}, ${citeName}, ${company}`)
-          // console.log(quote.content[0].content[0].value)
+        {allReferences.map(reference => {
+          const { id, citeName, company } = reference.node
+          const quote = reference.node.quote.json
+
           return (
             <li key={id} className={styles.item}>
-              <Blockquote>{quote}</Blockquote>
+              <Blockquote>
+                <RichText>{quote}</RichText>
+              </Blockquote>
               <cite className={styles.cite}>
                 - {citeName} ({company})
               </cite>
@@ -43,11 +45,7 @@ export default props => (
             node {
               id
               quote {
-                content {
-                  content {
-                    value
-                  }
-                }
+                json
               }
               citeName
               company

@@ -2,9 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Badge from '../../Badge'
+import Layout from '../../Layout'
+
 import { classNames } from '../../../utils/css'
 
 import styles from './BadgeList.module.scss'
+
+const { Box } = Layout
 
 const BadgeList = ({ list, isHorizontal, isInverse }) => {
   const className = classNames(styles.root, isHorizontal && styles.horizontal)
@@ -12,7 +16,12 @@ const BadgeList = ({ list, isHorizontal, isInverse }) => {
     <ul className={className}>
       {list.map(item => (
         <li className={styles.listItem} key={item.id}>
-          <Badge icon={item.icon} isInverse={isInverse} /> {item.label}
+          <Box isTight>
+            <Badge icon={item.icon} isInverse={isInverse} />
+          </Box>
+          <Box isTight>
+            <span>{item.label}</span>
+          </Box>
         </li>
       ))}
     </ul>
