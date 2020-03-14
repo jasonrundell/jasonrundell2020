@@ -28,7 +28,7 @@ export default ({ data }) => {
         author={data.site.siteMetadata.author}
         lang={data.site.siteMetadata.lang}
       />
-      <Section>
+      <Section id="intro">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -63,7 +63,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      <Section>
+      <Section id="tools-and-tech">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -82,7 +82,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      <Section>
+      <Section id="experience">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -100,7 +100,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      <Section>
+      <Section id="references">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -112,7 +112,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      {/* <Section>
+      {/* <Section id="quotes">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -128,7 +128,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section> */}
-      <Section>
+      <Section id="contact">
         <Container isContained isCentered>
           <Box>
             <Row>
