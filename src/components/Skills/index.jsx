@@ -10,7 +10,7 @@ import onlyUnique from '../../utils/unique'
 // CSS
 import styles from './Skills.module.scss'
 
-const { Box, Row } = Layout
+const { Box, Grid, Row } = Layout
 const { BadgeList } = Lists
 
 const Skills = ({ data }) => {
@@ -59,33 +59,40 @@ const Skills = ({ data }) => {
         <BadgeList list={legendList} isHorizontal isInverse />
       </Row>
       <Row>
-        {uniqueCategories.map((parentCategory, index) => {
-          return (
-            <div key={index} className={styles.list}>
-              <h3 className={styles.title}>{parentCategory}</h3>
-              <ul className={styles.list}>
-                {skills.map(item => {
-                  const { id, name, category, expertiseLevel } = item
+        <Grid
+          columnCount={1}
+          mediumColumnCount={1}
+          largeColumnCount={3}
+          breakInside="avoid"
+        >
+          {uniqueCategories.map((parentCategory, index) => {
+            return (
+              <div key={index} className={styles.list}>
+                <h3 className={styles.title}>{parentCategory}</h3>
+                <ul className={styles.list}>
+                  {skills.map(item => {
+                    const { id, name, category, expertiseLevel } = item
 
-                  if (parentCategory === category) {
-                    return (
-                      <li key={id} className={styles.item}>
-                        <Box isTight>
-                          <Badge icon={expertiseLevel} isInverse />
-                        </Box>
-                        <Box isTight>
-                          <span className={styles.itemText}>{name}</span>
-                        </Box>
-                      </li>
-                    )
-                  } else {
-                    return null
-                  }
-                })}
-              </ul>
-            </div>
-          )
-        })}
+                    if (parentCategory === category) {
+                      return (
+                        <li key={id} className={styles.item}>
+                          <Box isTight>
+                            <Badge icon={expertiseLevel} isInverse />
+                          </Box>
+                          <Box isTight>
+                            <span className={styles.itemText}>{name}</span>
+                          </Box>
+                        </li>
+                      )
+                    } else {
+                      return null
+                    }
+                  })}
+                </ul>
+              </div>
+            )
+          })}
+        </Grid>
       </Row>
     </>
   )

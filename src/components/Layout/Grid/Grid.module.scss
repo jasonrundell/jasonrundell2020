@@ -1,5 +1,6 @@
 .root {
   column-count: 1;
+  width: 100%;
 }
 
 @for $i from 1 through 12 {
@@ -19,17 +20,19 @@
 }
 
 .break-inside__auto {
+  /** TODO: Fix the way we use break-inside. Should not use element selectors **/
   article,
   div,
   section {
-    // break-inside: auto;
+    break-inside: auto;
   }
 }
 
 .break-inside__avoid {
+  /** TODO: Fix the way we use break-inside. Should not use element selectors **/
   article,
   div,
   section {
-    // break-inside: avoid;
+    break-inside: avoid;
   }
 }
