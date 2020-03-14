@@ -14,7 +14,7 @@ const Badge = ({ icon, isInverse }) => {
   const className = classNames(styles.root, isInverse && styles.inverse)
   return (
     <div className={className}>
-      <Box>{icon}</Box>
+      <Box isTight>{icon}</Box>
     </div>
   )
 }
