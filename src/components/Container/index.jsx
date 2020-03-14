@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import { classNames } from '../../../utils/css'
 
-import styles from './Section.module.scss'
+import styles from './Container.module.scss'
 
-const Section = ({ children, isContained, isCentered }) => {
+const Container = ({ children, isContained, isCentered }) => {
   const className = classNames(
     styles.root,
     isContained && styles.contained,
@@ -14,15 +14,15 @@ const Section = ({ children, isContained, isCentered }) => {
   return <section className={className}>{children}</section>
 }
 
-Section.defaultProps = {
+Container.defaultProps = {
   isContained: false,
   isCentered: false,
 }
 
-Section.propTypes = {
+Container.propTypes = {
   children: PropTypes.any.isRequired,
   isContained: PropTypes.bool,
   isCentered: PropTypes.bool,
 }
 
-export default Section
+export default Container
