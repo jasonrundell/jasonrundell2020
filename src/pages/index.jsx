@@ -112,7 +112,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      <Section>
+      {/* <Section>
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -127,7 +127,7 @@ export default ({ data }) => {
             </Row>
           </Box>
         </Container>
-      </Section>
+      </Section> */}
       <Section>
         <Container isContained isCentered>
           <Box>
