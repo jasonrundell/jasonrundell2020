@@ -6,6 +6,7 @@ import Contentful from './Contentful'
 import Footer from './Footer'
 import Header from './Header'
 import Layout from './Layout'
+import Links from './Links'
 import Lists from './Lists'
 import Main from './Main'
 import Page from './Page'
@@ -29,6 +30,7 @@ export default {
   Footer,
   Header,
   Layout,
+  Links,
   Lists,
   Main,
   Page,

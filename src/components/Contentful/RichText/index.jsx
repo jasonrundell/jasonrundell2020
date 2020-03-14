@@ -10,11 +10,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Typography from '../../Typography'
 
-const { Paragraph, Title } = Typography
+const { Strong, Paragraph, Title } = Typography
 
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <strong>{text}</strong>,
+    [MARKS.BOLD]: text => <Strong>{text}</Strong>,
     [MARKS.ITALIC]: text => <em>{text}</em>,
     [MARKS.UNDERLINE]: text => <u>{text}</u>,
     [MARKS.CODE]: text => <code>{text}</code>,

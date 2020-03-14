@@ -5,6 +5,7 @@ import Components from '../components'
 
 const {
   Layout,
+  Links,
   Page,
   Quote,
   Positions,
@@ -16,6 +17,7 @@ const {
 } = Components
 const { Box, Container, Row } = Layout
 const { Title, Paragraph } = Typography
+const { ExternalLink } = Links
 
 export default ({ data }) => {
   return (
@@ -135,27 +137,27 @@ export default ({ data }) => {
             <Row>
               <ul>
                 <li>
-                  <a href="mailto:contact@jasonrundell.com">
+                  <ExternalLink url="mailto:contact@jasonrundell.com">
                     contact@jasonrundell.com
-                  </a>
+                  </ExternalLink>
                 </li>
                 <li>
-                  <a
-                    href="https://github.com/jasonrundell"
+                  <ExternalLink
+                    url="https://github.com/jasonrundell"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     GitHub
-                  </a>
+                  </ExternalLink>
                 </li>
                 <li>
-                  <a
-                    href="https://www.linkedin.com/in/jasonrundell/"
+                  <ExternalLink
+                    url="https://www.linkedin.com/in/jasonrundell/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     LinkedIn
-                  </a>
+                  </ExternalLink>
                 </li>
               </ul>
             </Row>

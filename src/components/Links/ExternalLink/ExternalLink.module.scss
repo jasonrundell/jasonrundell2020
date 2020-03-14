@@ -1,0 +1,6 @@
+.root {
+  color: $linkColor;
+  &:hover {
+    color: $linkColorHover;
+  }
+}
