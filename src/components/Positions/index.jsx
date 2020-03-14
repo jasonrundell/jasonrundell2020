@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Typography from '../Typography'
+
 // CSS
 import styles from './Positions.module.scss'
+
+const { Title } = Typography
 
 const Positions = ({ data }) => {
   const allPositions = data.allContentfulPositions.edges
@@ -15,7 +19,9 @@ const Positions = ({ data }) => {
           const { id, role, company, startDate, endDate } = position.node
           return (
             <li key={id} className={styles.item}>
-              <h3 className={styles.role}>{role}</h3>
+              <Title level={4} className={styles.role}>
+                {role}
+              </Title>
               <span className={styles.company}>{company}</span>
               <br />
               <span className={styles.startDate}>{startDate}</span> -{' '}
@@ -39,8 +45,8 @@ export default props => (
               orderId
               role
               company
-              startDate
-              endDate
+              startDate(formatString: "MMMM YYYY")
+              endDate(formatString: "MMMM YYYY")
             }
           }
         }

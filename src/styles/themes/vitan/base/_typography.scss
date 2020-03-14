@@ -8,18 +8,27 @@ $lineHeightBase: 1.5;
 // Headings
 $h1Size: $sizeLargest;
 $h1Weight: 500;
+$h1MarginTop: 0;
+$h1MarginBottom: $sizeLargest;
 $h2Size: $sizeLarger;
 $h2Weight: 500;
+$h2MarginTop: 0;
+$h2MarginBottom: $sizeLarger;
 $h3Size: $sizeLarge;
 $h3Weight: 500;
+$h3MarginTop: 0;
+$h3MarginBottom: $sizeLarge;
 $h4Size: $sizeNormal;
 $h4Weight: 500;
+$h4MarginTop: 0;
+$h4MarginBottom: $sizeNormal;
 
 // Paragraphs
 $paragraphSize: $sizeNormal;
 $paragraphWeight: 400;
 $paragraphLineHeight: $lineHeightBase;
-$paragraphMarginBottom: $sizeSmall;
+$paragraphMarginTop: 0;
+$paragraphMarginBottom: $sizeNormal;
 
 // Links
 $linkSize: $sizeNormal;
