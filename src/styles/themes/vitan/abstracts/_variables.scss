@@ -1,3 +1,22 @@
+/** SIZE UNITS  **/
+
+$sizeSmallest: 0.25rem;
+$sizeSmaller: 0.5rem;
+$sizeSmall: 0.75rem;
+$sizeNormal: 1rem;
+$sizeLarge: 1.25rem;
+$sizeLarger: 1.5rem;
+$sizeLargest: 2.5rem;
+
+// Breakpoints
+$smallBreakpoint: 368px;
+$mediumBreakpoint: 768px;
+$largeBreakpoint: 1024px;
+$largerBreakpoint: 1366px;
+$largestBreakpoint: 1500px;
+
+/** COLORS **/
+
 // Prime
 $colorPrime: #232f3e;
 $colorPrimeLight: lighten($colorPrime, 10%);
@@ -32,26 +51,3 @@ $linkColorLight: lighten($linkColorPrime, 10%);
 $linkColorLighter: lighten($linkColorPrime, 30%);
 $linkColorDark: darken($linkColorPrime, 10%);
 $linkColorDarker: darken($linkColorPrime, 30%);
-
-// Typography
-$fontSansSerif: 'Montserrat', 'HelveticaNeue-Light', 'Helvetica Neue Light',
-  'Helvetica Neue', Helvetica, sans-serif;
-$fontSerif: 'Times New Roman', 'Times', serif;
-$fontSizeBase: 125%;
-$lineHeightBase: 1.5;
-
-// Utilities
-$sizeSmallest: 0.25rem; // $sizeSmallest
-$sizeSmaller: 0.5rem; // $sizeSmaller
-$sizeSmall: 0.75rem; // $sizeSmall
-$sizeNormal: 1rem; // $sizeNormal
-$sizeLarge: 1.25rem; // $sizeLarge
-$sizeLarger: 1.5rem; // $sizeLarger
-$sizeLargest: 2rem; // $sizeLargest
-
-// Breakpoints
-$smallBreakpoint: 368px;
-$mediumBreakpoint: 768px;
-$largeBreakpoint: 1024px;
-$largerBreakpoint: 1366px;
-$largestBreakpoint: 1500px;

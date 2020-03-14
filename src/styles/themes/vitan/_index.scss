@@ -4,7 +4,7 @@
 @import 'vendors';
 
 .theme__vitan {
-  @extend .font__regular;
+  font-family: $fontSansSerif;
   font-size: $fontSizeBase;
   position: relative;
   line-height: $lineHeightBase;

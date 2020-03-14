@@ -5,10 +5,12 @@ import SkipToMain from '../SkipToMain'
 import Main from '../Main'
 import Footer from '../Footer'
 import Typography from '../Typography'
+import Layout from '../Layout'
 
 import styles from './Page.module.scss'
 
 const { Paragraph } = Typography
+const { Container } = Layout
 
 const Page = ({ children }) => {
   return (
@@ -16,9 +18,13 @@ const Page = ({ children }) => {
       <SkipToMain />
       <Main>{children}</Main>
       <Footer>
-        <Paragraph>
-          Jason Rundell © {new Date().getFullYear()}. All rights reserved.
-        </Paragraph>
+        <Container isContained isCentered>
+          <Paragraph>
+            <small>
+              Jason Rundell © {new Date().getFullYear()}. All rights reserved.
+            </small>
+          </Paragraph>
+        </Container>
       </Footer>
     </div>
   )
