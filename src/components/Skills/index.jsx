@@ -61,7 +61,7 @@ const Skills = ({ data }) => {
       <Row>
         <Grid
           columnCount={1}
-          mediumColumnCount={1}
+          mediumColumnCount={2}
           largeColumnCount={3}
           breakInside="avoid"
         >
