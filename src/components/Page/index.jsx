@@ -7,26 +7,29 @@ import Footer from '../Footer'
 import Typography from '../Typography'
 import Layout from '../Layout'
 
-import styles from './Page.module.scss'
-
 const { Paragraph } = Typography
-const { Container } = Layout
+const { Box, Container } = Layout
 
 const Page = ({ children }) => {
   return (
-    <div className={styles.root}>
+    <>
       <SkipToMain />
       <Main>{children}</Main>
-      <Footer>
-        <Container isContained isCentered>
-          <Paragraph>
-            <small>
-              Jason Rundell © {new Date().getFullYear()}. All rights reserved.
-            </small>
-          </Paragraph>
-        </Container>
-      </Footer>
-    </div>
+      <div className="background__prime--darker">
+        <Footer>
+          <Container isContained isCentered>
+            <Box>
+              <Paragraph>
+                <small>
+                  Jason Rundell © {new Date().getFullYear()}. All rights
+                  reserved.
+                </small>
+              </Paragraph>
+            </Box>
+          </Container>
+        </Footer>
+      </div>
+    </>
   )
 }
 
