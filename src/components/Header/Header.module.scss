@@ -1,0 +1,10 @@
+.root {
+  height: 6rem;
+  background: linear-gradient(0deg, rgba(35, 47, 62, 0), $colorPrimeDark);
+  display: block;
+  position: fixed;
+  width: 100%;
+  transition: all 0.5s ease;
+  top: 0;
+  z-index: 99;
+}
