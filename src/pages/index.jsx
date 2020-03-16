@@ -7,7 +7,6 @@ const {
   Layout,
   Links,
   Page,
-  Quote,
   Positions,
   References,
   Section,
