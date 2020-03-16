@@ -14,7 +14,7 @@ const {
   Skills,
   Typography,
 } = Components
-const { Box, Container, Row } = Layout
+const { Box, Container, Row, Spacer } = Layout
 const { Title, Paragraph } = Typography
 const { ExternalLink } = Links
 
@@ -28,7 +28,8 @@ export default ({ data }) => {
         lang={data.site.siteMetadata.lang}
       />
       <Section id="intro">
-        <Container isContained isCentered>
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
               <Title>{data.site.siteMetadata.site_name}</Title>
@@ -61,9 +62,11 @@ export default ({ data }) => {
             </Row>
           </Box>
         </Container>
+        <Spacer sizeLarge="largest" />
       </Section>
       <Section id="tools-and-tech" className="background__prime--dark">
-        <Container isContained isCentered>
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
               <Title>Tools &amp; Technologies</Title>
@@ -82,7 +85,7 @@ export default ({ data }) => {
         </Container>
       </Section>
       <Section id="experience" className="background__prime--dark">
-        <Container isContained isCentered>
+        <Container>
           <Box>
             <Row>
               <Title>Experience</Title>
@@ -100,7 +103,8 @@ export default ({ data }) => {
         </Container>
       </Section>
       <Section id="references" className="background__prime--dark">
-        <Container isContained isCentered>
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
               <Title>References</Title>
@@ -112,7 +116,8 @@ export default ({ data }) => {
         </Container>
       </Section>
       {/* <Section id="quotes">
-        <Container isContained isCentered>
+      <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
               <Title>Quotes</Title>
@@ -128,7 +133,8 @@ export default ({ data }) => {
         </Container>
       </Section> */}
       <Section id="contact" className="background__prime--darker">
-        <Container isContained isCentered>
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
               <Title>Let's connect</Title>
