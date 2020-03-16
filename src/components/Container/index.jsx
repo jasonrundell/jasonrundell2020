@@ -6,12 +6,12 @@ import { classNames } from '../../../utils/css'
 import styles from './Container.module.scss'
 
 const Container = ({ children, isContained, isCentered }) => {
-  const className = classNames(
+  const classes = classNames(
     styles.root,
     isContained && styles.contained,
     isCentered && styles.centered
   )
-  return <section className={className}>{children}</section>
+  return <section className={classes}>{children}</section>
 }
 
 Container.defaultProps = {

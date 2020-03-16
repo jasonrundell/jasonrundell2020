@@ -11,9 +11,9 @@ import styles from './Badge.module.scss'
 const { Box } = Layout
 
 const Badge = ({ icon, isInverse }) => {
-  const className = classNames(styles.root, isInverse && styles.inverse)
+  const classes = classNames(styles.root, isInverse && styles.inverse)
   return (
-    <div className={className}>
+    <div className={classes}>
       <Box isTight>{icon}</Box>
     </div>
   )

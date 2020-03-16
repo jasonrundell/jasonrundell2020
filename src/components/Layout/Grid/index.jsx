@@ -19,7 +19,7 @@ const Grid = ({
   const largeColClassName = `colLarge${largeColumnCount}`
   const breakInsideClassName = `breakInside__${breakInside}`
 
-  const className = classNames(
+  const classes = classNames(
     styles.root,
     styles[colClassName],
     styles[mediumColClassName],
@@ -27,7 +27,7 @@ const Grid = ({
     breakInside && styles[breakInsideClassName]
   )
 
-  return <div className={className}>{children}</div>
+  return <div className={classes}>{children}</div>
 }
 
 Grid.defaultProps = {

@@ -11,9 +11,9 @@ import styles from './BadgeList.module.scss'
 const { Box } = Layout
 
 const BadgeList = ({ list, isHorizontal, isInverse }) => {
-  const className = classNames(styles.root, isHorizontal && styles.horizontal)
+  const classes = classNames(styles.root, isHorizontal && styles.horizontal)
   return (
-    <ul className={className}>
+    <ul className={classes}>
       {list.map(item => (
         <li className={styles.listItem} key={item.id}>
           <Box isTight>

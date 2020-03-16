@@ -6,12 +6,12 @@ import { classNames } from '../../utils/css'
 import styles from './Card.module.scss'
 
 const Card = ({ children, elevation, isElevationAnimated }) => {
-  const className = classNames(
+  const classes = classNames(
     styles.root,
     styles[`elevation${elevation}`],
     isElevationAnimated && styles.animation
   )
-  return <div className={className}>{children}</div>
+  return <div className={classes}>{children}</div>
 }
 
 Card.defaultProps = {
