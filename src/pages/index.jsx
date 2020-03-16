@@ -62,7 +62,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      <Section id="tools-and-tech">
+      <Section id="tools-and-tech" className="background__prime--dark">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -81,7 +81,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      <Section id="experience">
+      <Section id="experience" className="background__prime--dark">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -99,7 +99,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section>
-      <Section id="references">
+      <Section id="references" className="background__prime--dark">
         <Container isContained isCentered>
           <Box>
             <Row>
@@ -127,7 +127,7 @@ export default ({ data }) => {
           </Box>
         </Container>
       </Section> */}
-      <Section id="contact">
+      <Section id="contact" className="background__prime--darker">
         <Container isContained isCentered>
           <Box>
             <Row>

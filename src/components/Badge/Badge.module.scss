@@ -1,7 +1,7 @@
 .root {
   display: inline-flex;
   border-radius: $sizeSmallest;
-  background-color: $bgColorPrime;
+  background-color: $backgroundColorPrime;
   color: $accentColorPrime;
   width: $sizeLarge;
   height: $sizeLarge;
@@ -14,7 +14,7 @@
 
 .inverse {
   background-color: $accentColorPrime;
-  color: $bgColorPrime;
+  color: $backgroundColorPrime;
   border: 1px solid $accentColorPrime;
 }
 

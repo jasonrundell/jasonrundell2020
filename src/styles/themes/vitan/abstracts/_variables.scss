@@ -25,11 +25,11 @@ $colorPrimeDark: darken($colorPrime, 10%);
 $colorPrimeDarker: darken($colorPrime, 30%);
 
 // Background
-$bgColorPrime: $colorPrime;
-$bgColorPrimeLight: lighten($bgColorPrime, 10%);
-$bgColorPrimeLighter: lighten($bgColorPrime, 30%);
-$bgColorPrimeDark: darken($bgColorPrime, 10%);
-$bgColorPrimeDarker: darken($bgColorPrime, 30%);
+$backgroundColorPrime: $colorPrime;
+$backgroundColorPrimeLight: lighten($backgroundColorPrime, 10%);
+$backgroundColorPrimeLighter: lighten($backgroundColorPrime, 30%);
+$backgroundColorPrimeDark: darken($backgroundColorPrime, 10%);
+$backgroundColorPrimeDarker: darken($backgroundColorPrime, 30%);
 
 // Font
 $fontColorPrime: $colorPrimeLighter;
