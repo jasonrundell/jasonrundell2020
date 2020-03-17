@@ -9,14 +9,6 @@ const contentfulConfig = {
   environment: process.env.CONTENTFUL_ENVIRONMENT_ID,
 }
 
-const { spaceId, accessToken } = contentfulConfig
-
-if (!spaceId || !accessToken) {
-  throw new Error(
-    'Contentful spaceId and the access token need to be provided.'
-  )
-}
-
 module.exports = {
   siteMetadata: {
     site_name: `Jason Rundell`,
