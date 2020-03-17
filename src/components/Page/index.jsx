@@ -7,13 +7,14 @@ import Main from '../Main'
 import Footer from '../Footer'
 import Typography from '../Typography'
 import Layout from '../Layout'
-import Lists from '../Lists'
+// import Lists from '../Lists'
+import DownloadResumeButton from '../DownloadResumeButton'
 
 import styles from './Page.module.scss'
 
 const { Paragraph } = Typography
 const { Box, Container } = Layout
-const { UnorderedList } = Lists
+// const { UnorderedList } = Lists
 
 const Page = ({ children }) => {
   return (
@@ -22,17 +23,7 @@ const Page = ({ children }) => {
       <Header>
         <Container>
           <Box>
-            <UnorderedList
-              items={[
-                'Home',
-                'Tools & Techniques',
-                'Experience',
-                'References',
-                'Contact',
-                'Download Resume',
-              ]}
-              isHorizontal
-            />
+            <DownloadResumeButton />
           </Box>
         </Container>
       </Header>
