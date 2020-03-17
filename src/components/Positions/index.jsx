@@ -45,8 +45,8 @@ export default props => (
               orderId
               role
               company
-              startDate(formatString: "MMMM YYYY")
-              endDate(formatString: "MMMM YYYY")
+              startDate
+              endDate
             }
           }
         }
