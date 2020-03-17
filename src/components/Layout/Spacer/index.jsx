@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { classNames } from '../../../utils/css'
 import { toCamelCase } from '../../../utils/format'
 
-import styles from './spacer.module.scss'
+import styles from './Spacer.module.scss'
 
 const Spacer = ({ sizeSmall, sizeMedium, sizeLarge }) => {
   const classes = classNames(
