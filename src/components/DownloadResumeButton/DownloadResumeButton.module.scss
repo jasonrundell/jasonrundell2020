@@ -1,0 +1,71 @@
+.root {
+  display: inline-block;
+  font-size: $sizeSmaller;
+  // line-height: $sizeSmall;
+  padding: 0.9rem 0.6rem 0.3rem 0.9rem;
+  background: $colorPrime;
+  border: 1px solid $colorPrimeLight;
+  border-radius: $sizeSmallest;
+  transition: all, 0.5s, ease;
+  animation-delay: 0;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+
+  @media (min-width: $mediumBreakpoint) {
+    font-size: $sizeSmall;
+  }
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accentColorPrime;
+    text-decoration: none;
+  }
+  &:hover,
+  &:focus {
+    background: $colorPrimeLight;
+    border-color: $accentColorPrime;
+  }
+  &:active {
+    color: $accentColorDark;
+    background: $colorPrimeDarker;
+  }
+  &.active {
+    color: $accentColorDark;
+  }
+
+  .arrow-icon {
+    position: relative;
+    top: -1px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    vertical-align: middle;
+    transform: rotate(90deg);
+    margin-left: $sizeSmallest;
+  }
+  .arrow-icon--circle {
+    transition: stroke-dashoffset 0.3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+  }
+  &:hover {
+    text-decoration: none;
+    .arrow-icon {
+      transform: translate3d(5px, 0, 0);
+      transform: rotate(90deg);
+      stroke: #e9be62;
+    }
+    .arrow-icon--circle {
+      stroke-dashoffset: 0;
+      stroke: #e9be62;
+    }
+    .arrow-icon--arrow {
+      stroke: #e9be62;
+    }
+  }
+}

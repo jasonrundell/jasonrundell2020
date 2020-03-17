@@ -1,11 +1,12 @@
 import Badge from './Badge'
 import Blockquote from './Blockquote'
-import Box from './Box'
 import Card from './Card'
 import Cite from './Cite'
+import Contentful from './Contentful'
 import Footer from './Footer'
 import Header from './Header'
 import Layout from './Layout'
+import Links from './Links'
 import Lists from './Lists'
 import Main from './Main'
 import Page from './Page'
@@ -23,12 +24,13 @@ import Typography from './Typography'
 export default {
   Badge,
   Blockquote,
-  Box,
   Card,
   Cite,
+  Contentful,
   Footer,
   Header,
   Layout,
+  Links,
   Lists,
   Main,
   Page,

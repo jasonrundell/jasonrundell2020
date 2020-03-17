@@ -1,14 +1,13 @@
 @import 'abstracts';
 @import 'base';
-@import 'layout';
 @import 'vendors';
 
 .theme__vitan {
-  @extend .font__regular;
+  font-family: $fontSansSerif;
   font-size: $fontSizeBase;
   position: relative;
   line-height: $lineHeightBase;
-  background: $bgColorPrime;
+  background: $backgroundColorPrime;
   color: $fontColorPrime;
   margin: 0;
   padding: 0;

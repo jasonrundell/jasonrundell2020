@@ -3,23 +3,30 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Blockquote from '../Blockquote'
+import Contentful from '../Contentful'
 
 // CSS
 import styles from './References.module.scss'
 
+const { RichText } = Contentful
+
 const References = ({ data }) => {
-  const allReferences = data.allMarkdownRemark.edges
+  const allReferences = data.allContentfulReferences.edges
 
   return (
     <>
       <ul className={styles.list}>
-        {allReferences.map(position => {
-          const { id, quote, cite_name, company } = position.node.frontmatter
+        {allReferences.map(reference => {
+          const { id, citeName, company } = reference.node
+          const quote = reference.node.quote.json
+
           return (
             <li key={id} className={styles.item}>
-              <Blockquote>{quote}</Blockquote>
+              <Blockquote>
+                <RichText>{quote}</RichText>
+              </Blockquote>
               <cite className={styles.cite}>
-                - {cite_name} ({company})
+                - {citeName} ({company})
               </cite>
             </li>
           )
@@ -33,19 +40,15 @@ export default props => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(
-          filter: { frontmatter: { parent_id: { eq: "references" } } }
-          sort: { order: ASC, fields: frontmatter___category }
-        ) {
+        allContentfulReferences(sort: { fields: id }) {
           edges {
             node {
-              frontmatter {
-                id
-                parent_id
-                quote
-                cite_name
-                company
+              id
+              quote {
+                json
               }
+              citeName
+              company
             }
           }
         }
@@ -56,7 +59,7 @@ export default props => (
 )
 References.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allContentfulReferences: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object).isRequired,
     }).isRequired,
   }).isRequired,

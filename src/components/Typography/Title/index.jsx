@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import styles from './Title.module.scss'
+
 const Title = ({ level, children }) => {
   const Component = `h${level}`
-  return <Component>{children}</Component>
+  return <Component className={styles[Component]}>{children}</Component>
 }
 
 Title.defaultProps = {

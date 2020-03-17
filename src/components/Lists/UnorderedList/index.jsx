@@ -6,9 +6,9 @@ import { classNames } from '../../../utils/css'
 import styles from './UnorderedList.module.scss'
 
 const UnorderedList = ({ items, children, isHorizontal }) => {
-  const className = classNames(styles.root, isHorizontal && styles.horizontal)
+  const classes = classNames(styles.root, isHorizontal && styles.horizontal)
   return (
-    <ul className={className}>
+    <ul className={classes}>
       {items.map((item, index) => (
         <li className={styles.listItem} key={index}>
           {item}

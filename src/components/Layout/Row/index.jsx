@@ -6,9 +6,9 @@ import { classNames } from '../../../utils/css'
 import styles from './Row.module.scss'
 
 const Row = ({ justify, children }) => {
-  const className = classNames(styles.root, styles[justify])
+  const classes = classNames(styles.root, styles[justify])
 
-  return <div className={className}>{children}</div>
+  return <div className={classes}>{children}</div>
 }
 
 Row.defaultProps = {

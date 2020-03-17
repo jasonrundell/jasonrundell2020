@@ -1,0 +1,25 @@
+$sizes: (
+  smallest: $sizeSmallest,
+  smaller: $sizeSmaller,
+  small: $sizeSmall,
+  normal: $sizeNormal,
+  large: $sizeLarge,
+  larger: $sizeLarger,
+  largest: $sizeLargest,
+);
+
+@each $name, $size in $sizes {
+  .small-#{$name} {
+    height: $size;
+  }
+  .medium-#{$name} {
+    @media (min-width: $mediumBreakpoint) {
+      height: $size;
+    }
+  }
+  .large-#{$name} {
+    @media (min-width: $largeBreakpoint) {
+      height: $size;
+    }
+  }
+}

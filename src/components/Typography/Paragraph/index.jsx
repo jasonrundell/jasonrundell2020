@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import styles from './Paragraph.module.scss'
+
 const Paragraph = ({ children }) => {
-  return <p>{children}</p>
+  return <p className={styles.root}>{children}</p>
 }
 
 Paragraph.propTypes = {

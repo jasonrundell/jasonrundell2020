@@ -5,9 +5,8 @@ import Components from '../components'
 
 const {
   Layout,
+  Links,
   Page,
-  Box,
-  Quote,
   Positions,
   References,
   Section,
@@ -15,28 +14,25 @@ const {
   Skills,
   Typography,
 } = Components
-const { Grid, Row } = Layout
+const { Box, Container, Row, Spacer } = Layout
 const { Title, Paragraph } = Typography
+const { ExternalLink } = Links
 
 export default ({ data }) => {
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <SEO
-        title={`${data.site.siteMetadata.title} | Home`}
-        description={data.site.siteMetadata.description}
+        title={`Jason Rundell - Full Stack Toronto Web Developer | Home | Home`}
+        description={`The official web site of Jason Rundell: A full stack web developer that loves the web!`}
         author={data.site.siteMetadata.author}
         lang={data.site.siteMetadata.lang}
       />
-      <Grid
-        columnCount={1}
-        mediumColumnCount={1}
-        largeColumnCount={1}
-        breakInside="avoid"
-      >
-        <Section>
+      <Section id="intro">
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
-              <Title>{data.site.siteMetadata.site_header}</Title>
+              <Title>{data.site.siteMetadata.site_name}</Title>
             </Row>
             <Row>
               <Title level={2}>Full Stack Web Developer</Title>
@@ -65,42 +61,31 @@ export default ({ data }) => {
               </Paragraph>
             </Row>
           </Box>
-        </Section>
-        <Section>
+        </Container>
+        <Spacer sizeLarge="largest" />
+      </Section>
+      <Section id="tools-and-tech" className="background__prime--dark">
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
-              <Title>Let's connect</Title>
+              <Title>Tools &amp; Technologies</Title>
             </Row>
             <Row>
-              <ul>
-                <li>
-                  <a href="mailto:contact@jasonrundell.com">
-                    contact@jasonrundell.com
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/jasonrundell"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/jasonrundell/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
+              <Paragraph>
+                Determined in building the best digital products that I can be
+                proud of. Committed to learning and sharing ideas with the team.
+                Always trying to be the best I can be.
+              </Paragraph>
+            </Row>
+            <Row>
+              <Skills />
             </Row>
           </Box>
-        </Section>
-        <Section>
+        </Container>
+      </Section>
+      <Section id="experience" className="background__prime--dark">
+        <Container>
           <Box>
             <Row>
               <Title>Experience</Title>
@@ -115,8 +100,11 @@ export default ({ data }) => {
               <Positions />
             </Row>
           </Box>
-        </Section>
-        <Section>
+        </Container>
+      </Section>
+      <Section id="references" className="background__prime--dark">
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
               <Title>References</Title>
@@ -125,8 +113,11 @@ export default ({ data }) => {
               <References />
             </Row>
           </Box>
-        </Section>
-        <Section>
+        </Container>
+      </Section>
+      {/* <Section id="quotes">
+      <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
               <Title>Quotes</Title>
@@ -139,32 +130,45 @@ export default ({ data }) => {
               </Quote>
             </Row>
           </Box>
-        </Section>
-      </Grid>
-      <Grid
-        columnCount={1}
-        mediumColumnCount={1}
-        largeColumnCount={1}
-        breakInside="avoid"
-      >
-        <Section>
+        </Container>
+      </Section> */}
+      <Section id="contact" className="background__prime--darker">
+        <Spacer sizeLarge="largest" />
+        <Container>
           <Box>
             <Row>
-              <Title>Tools & Technologies</Title>
+              <Title>Let's connect</Title>
             </Row>
             <Row>
-              <Paragraph>
-                Determined in building the best digital products that I can be
-                proud of. Committed to learning and sharing ideas with the team.
-                Always trying to be the best I can be.
-              </Paragraph>
-            </Row>
-            <Row>
-              <Skills />
+              <ul>
+                <li>
+                  <ExternalLink url="mailto:contact@jasonrundell.com">
+                    contact@jasonrundell.com
+                  </ExternalLink>
+                </li>
+                <li>
+                  <ExternalLink
+                    url="https://github.com/jasonrundell"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    GitHub
+                  </ExternalLink>
+                </li>
+                <li>
+                  <ExternalLink
+                    url="https://www.linkedin.com/in/jasonrundell/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </ExternalLink>
+                </li>
+              </ul>
             </Row>
           </Box>
-        </Section>
-      </Grid>
+        </Container>
+      </Section>
     </Page>
   )
 }
@@ -173,11 +177,8 @@ export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
-        title
-        description
-        site_header
         author
-        lang
+        site_name
       }
     }
   }

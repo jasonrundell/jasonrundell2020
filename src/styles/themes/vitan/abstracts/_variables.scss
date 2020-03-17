@@ -1,3 +1,22 @@
+/** SIZE UNITS  **/
+
+$sizeSmallest: 0.25rem;
+$sizeSmaller: 0.75rem;
+$sizeSmall: 1rem;
+$sizeNormal: 1.25rem;
+$sizeLarge: 1.5rem;
+$sizeLarger: 2rem;
+$sizeLargest: 2.5rem;
+
+// Breakpoints
+$smallBreakpoint: 368px;
+$mediumBreakpoint: 768px;
+$largeBreakpoint: 1024px;
+$largerBreakpoint: 1366px;
+$largestBreakpoint: 1500px;
+
+/** COLORS **/
+
 // Prime
 $colorPrime: #232f3e;
 $colorPrimeLight: lighten($colorPrime, 10%);
@@ -6,11 +25,11 @@ $colorPrimeDark: darken($colorPrime, 10%);
 $colorPrimeDarker: darken($colorPrime, 30%);
 
 // Background
-$bgColorPrime: $colorPrime;
-$bgColorPrimeLight: lighten($bgColorPrime, 10%);
-$bgColorPrimeLighter: lighten($bgColorPrime, 30%);
-$bgColorPrimeDark: darken($bgColorPrime, 10%);
-$bgColorPrimeDarker: darken($bgColorPrime, 30%);
+$backgroundColorPrime: $colorPrime;
+$backgroundColorPrimeLight: lighten($backgroundColorPrime, 10%);
+$backgroundColorPrimeLighter: lighten($backgroundColorPrime, 30%);
+$backgroundColorPrimeDark: darken($backgroundColorPrime, 10%);
+$backgroundColorPrimeDarker: darken($backgroundColorPrime, 30%);
 
 // Font
 $fontColorPrime: $colorPrimeLighter;
@@ -32,24 +51,3 @@ $linkColorLight: lighten($linkColorPrime, 10%);
 $linkColorLighter: lighten($linkColorPrime, 30%);
 $linkColorDark: darken($linkColorPrime, 10%);
 $linkColorDarker: darken($linkColorPrime, 30%);
-
-// Typography
-$fontSansSerif: 'Montserrat', 'HelveticaNeue-Light', 'Helvetica Neue Light',
-  'Helvetica Neue', Helvetica, sans-serif;
-$fontSerif: 'Times New Roman', 'Times', serif;
-$fontSizeBase: 125%;
-$lineHeightBase: 1.5;
-
-// Utilities
-$sizeSmallest: 0.25rem; // $sizeSmallest
-$sizeSmaller: 0.5rem; // $sizeSmaller
-$sizeSmall: 0.75rem; // $sizeSmall
-$sizeNormal: 1rem; // $sizeNormal
-$sizeLarge: 1.25rem; // $sizeLarge
-$sizeLarger: 1.5rem; // $sizeLarger
-$sizeLargest: 2rem; // $sizeLargest
-
-// Breakpoints
-$largeBreakpoint: 1024px;
-$mediumBreakpoint: 768px;
-$smallBreakpoint: 368px;

@@ -7,10 +7,10 @@ import SEO from '../../components/SEO'
 export default ({ data }) => (
   <Page title={data.site.siteMetadata.title}>
     <SEO
-      title={`${data.site.siteMetadata.title} | 404 Page not found`}
-      description={data.site.siteMetadata.description}
+      title={`404 Page not found`}
+      description={`404 Page not found`}
       author={data.site.siteMetadata.author}
-      lang={data.site.siteMetadata.lang}
+      lang={`en-CA`}
     />
     <h1>Not found</h1>
     <p>Sorry folks, nothing here to see.</p>
@@ -22,10 +22,8 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
-        description
         author
-        lang
+        site_name
       }
     }
   }

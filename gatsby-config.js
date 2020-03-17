@@ -2,13 +2,25 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  host: process.env.CONTENTFUL_HOST,
+  environment: process.env.CONTENTFUL_ENVIRONMENT_ID,
+}
+
+const { spaceId, accessToken } = contentfulConfig
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    'Contentful spaceId and the access token need to be provided.'
+  )
+}
+
 module.exports = {
   siteMetadata: {
-    title: `Jason Rundell - Full Stack Toronto Web Developer`,
-    description: `The official web site of Jason Rundell: A full stack web developer that loves the web!`,
-    site_header: `Jason Rundell`,
+    site_name: `Jason Rundell`,
     author: `@jasonrundell`,
-    lang: `en`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -60,6 +72,10 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: contentfulConfig,
     },
   ],
 }
