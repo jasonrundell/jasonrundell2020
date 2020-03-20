@@ -91,12 +91,6 @@ export default ({ data }) => {
               <Title>Experience</Title>
             </Row>
             <Row>
-              <Paragraph>
-                Logos of: LoyaltyOne, Intuit, AIR MILES, QuickBooks, Flight
-                Centre
-              </Paragraph>
-            </Row>
-            <Row>
               <Positions />
             </Row>
           </Box>
