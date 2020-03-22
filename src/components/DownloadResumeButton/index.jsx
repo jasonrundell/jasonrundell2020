@@ -18,9 +18,9 @@ const DownloadResumeButton = () => {
           <g
             fill="none"
             stroke="#e9be62"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-            stroke-miterlimit="10"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
+            strokeMiterlimit="10"
           >
             <circle
               className={styles.arrowIconCircle}
