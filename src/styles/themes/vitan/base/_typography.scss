@@ -1,3 +1,20 @@
+// Fonts
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/montserrat-regular.woff2') format('woff2'),
+    url('/montserrat-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/montserrat-medium.woff2') format('woff2'),
+    url('/montserrat-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
 // Typography
 $fontSansSerif: 'Montserrat', 'HelveticaNeue-Light', 'Helvetica Neue Light',
   'Helvetica Neue', Helvetica, sans-serif;
