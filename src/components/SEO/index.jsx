@@ -45,12 +45,7 @@ const SEO = props => (
     bodyAttributes={{
       class: 'theme__vitan',
     }}
-  >
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
-      rel="stylesheet"
-    />
-  </Helmet>
+  ></Helmet>
 )
 
 SEO.defaultProps = {
