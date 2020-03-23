@@ -7,14 +7,14 @@ import Main from '../Main'
 import Footer from '../Footer'
 import Typography from '../Typography'
 import Layout from '../Layout'
-// import Lists from '../Lists'
+import Links from '../Links'
 import DownloadResumeButton from '../DownloadResumeButton'
 
 import styles from './Page.module.scss'
 
 const { Paragraph } = Typography
 const { Box, Container } = Layout
-// const { UnorderedList } = Lists
+const { ExternalLink } = Links
 
 const Page = ({ children }) => {
   return (
@@ -34,7 +34,15 @@ const Page = ({ children }) => {
             <Box>
               <Paragraph>
                 <small>
-                  Jason Rundell © {new Date().getFullYear()}. All rights
+                  Site design by{' '}
+                  <ExternalLink
+                    url="https://donnavitan.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Donna Vitan
+                  </ExternalLink>
+                  ❤️. Jason Rundell © {new Date().getFullYear()}. All rights
                   reserved.
                 </small>
               </Paragraph>
