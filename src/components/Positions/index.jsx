@@ -19,9 +19,7 @@ const Positions = ({ data }) => {
           const { id, role, company, startDate, endDate } = position.node
           return (
             <li key={id} className={styles.item}>
-              <Title level={4} className={styles.role}>
-                {role}
-              </Title>
+              <Title level={2}>{role}</Title>
               <span className={styles.company}>{company}</span>
               <br />
               <span className={styles.startDate}>{startDate}</span> -{' '}
