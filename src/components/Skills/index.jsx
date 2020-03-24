@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../Layout'
 import Badge from '../Badge'
 import Lists from '../Lists'
+import Typography from '../Typography'
 import onlyUnique from '../../utils/unique'
 
 // CSS
@@ -12,6 +13,7 @@ import styles from './Skills.module.scss'
 
 const { Box, Grid, Row } = Layout
 const { BadgeList } = Lists
+const { Title } = Typography
 
 const Skills = ({ data }) => {
   const edges = data.allContentfulSkills.edges
@@ -68,7 +70,7 @@ const Skills = ({ data }) => {
           {uniqueCategories.map((parentCategory, index) => {
             return (
               <div key={index} className={styles.list}>
-                <h3 className={styles.title}>{parentCategory}</h3>
+                <Title level={2}>{parentCategory}</Title>
                 <ul className={styles.list}>
                   {skills.map(item => {
                     const { id, name, category, expertiseLevel } = item
