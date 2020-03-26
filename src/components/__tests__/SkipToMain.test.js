@@ -1,11 +1,11 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { create } from 'react-test-renderer'
 
 import SkipToMain from '../SkipToMain'
 
-describe('SkipToMain', () => {
-  it('renders correctly', () => {
-    const tree = renderer.create(<SkipToMain />).toJSON()
-    expect(tree).toMatchSnapshot()
+describe('SkipToMain component', () => {
+  test('Matches the snapshot', () => {
+    const component = create(<SkipToMain />)
+    expect(component.toJSON()).toMatchSnapshot()
   })
 })
