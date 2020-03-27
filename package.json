@@ -8,6 +8,7 @@
     "@contentful/rich-text-types": "^14.1.0",
     "contentful": "^7.14.0",
     "gatsby": "^2.19.39",
+    "gatsby-plugin-load-script": "^1.0.6",
     "gatsby-plugin-manifest": "^2.2.42",
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-react-helmet": "^3.1.3",
