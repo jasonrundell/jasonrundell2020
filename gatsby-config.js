@@ -70,5 +70,13 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
+    {
+      resolve: `gatsby-plugin-load-script`,
+      options: {
+        disable: !process.env.SENTRY_DSN, // When do you want to disable it ?
+        src: process.env.SENTRY_SRC,
+        onLoad: `() => Sentry.init({dsn:"${process.env.SENTRY_DSN}"})`,
+      },
+    },
   ],
 }
