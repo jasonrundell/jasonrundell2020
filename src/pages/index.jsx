@@ -159,7 +159,6 @@ export default ({ data }) => {
                   </ExternalLink>
                 </li>
               </ul>
-              <button onClick={methodDoesNotExist}>Break the world</button>
             </Row>
           </Box>
         </Container>
