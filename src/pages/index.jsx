@@ -23,6 +23,7 @@ const { ExternalLink } = Links
 export default ({ data }) => {
   const positions = edgesToObject(data.allContentfulPositions.edges)
   const skills = edgesToObject(data.allContentfulSkills.edges)
+  const references = edgesToObject(data.allContentfulReferences.edges)
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <SEO
@@ -108,7 +109,7 @@ export default ({ data }) => {
               <Title>References</Title>
             </Row>
             <Row>
-              <References />
+              <References references={references} />
             </Row>
           </Box>
         </Container>
@@ -198,6 +199,18 @@ export const pageQuery = graphql`
           company
           startDate
           endDate
+        }
+      }
+    }
+    allContentfulReferences(sort: { fields: id }) {
+      edges {
+        node {
+          id
+          quote {
+            json
+          }
+          citeName
+          company
         }
       }
     }
