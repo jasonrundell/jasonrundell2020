@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 
 import Components from '../components'
 
+import { edgesToObject } from '../utils/graphql'
+
 const {
   Layout,
   Links,
@@ -19,6 +21,7 @@ const { Title, Paragraph } = Typography
 const { ExternalLink } = Links
 
 export default ({ data }) => {
+  const positions = edgesToObject(data.allContentfulPositions.edges)
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <SEO
@@ -91,7 +94,7 @@ export default ({ data }) => {
               <Title>Experience</Title>
             </Row>
             <Row>
-              <Positions />
+              <Positions positions={positions} />
             </Row>
           </Box>
         </Container>
@@ -173,6 +176,18 @@ export const pageQuery = graphql`
       siteMetadata {
         author
         site_name
+      }
+    }
+    allContentfulPositions(sort: { fields: orderId, order: DESC }) {
+      edges {
+        node {
+          id
+          orderId
+          role
+          company
+          startDate
+          endDate
+        }
       }
     }
   }
