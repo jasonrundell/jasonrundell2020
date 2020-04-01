@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../Layout'
 import Badge from '../Badge'
@@ -15,22 +14,16 @@ const { Box, Grid, Row } = Layout
 const { BadgeList } = Lists
 const { Title } = Typography
 
-const Skills = ({ data }) => {
-  const edges = data.allContentfulSkills.edges
-  const allSkills = [...edges]
+const Skills = ({ skills }) => {
   let categories = []
-  let skills = []
 
-  allSkills.forEach(category => {
-    categories.push(category.node.category)
+  // build array of categories
+  skills.forEach(category => {
+    categories.push(category.category)
   })
 
   // I only want the unique categories
   const uniqueCategories = categories.filter(onlyUnique)
-
-  allSkills.forEach(skill => {
-    skills.push(skill.node)
-  })
 
   const legendList = [
     {
@@ -100,29 +93,15 @@ const Skills = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        allContentfulSkills(sort: { fields: category }) {
-          edges {
-            node {
-              id
-              category
-              name
-              expertiseLevel
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Skills data={data} {...props} />}
-  />
-)
 Skills.propTypes = {
-  data: PropTypes.shape({
-    allContentfulSkills: PropTypes.shape({
-      edges: PropTypes.arrayOf(PropTypes.object).isRequired,
-    }).isRequired,
-  }).isRequired,
+  skills: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+      expertiseLevel: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 }
+
+export default Skills

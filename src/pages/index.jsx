@@ -22,6 +22,7 @@ const { ExternalLink } = Links
 
 export default ({ data }) => {
   const positions = edgesToObject(data.allContentfulPositions.edges)
+  const skills = edgesToObject(data.allContentfulSkills.edges)
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <SEO
@@ -82,7 +83,7 @@ export default ({ data }) => {
               </Paragraph>
             </Row>
             <Row>
-              <Skills />
+              <Skills skills={skills} />
             </Row>
           </Box>
         </Container>
@@ -176,6 +177,16 @@ export const pageQuery = graphql`
       siteMetadata {
         author
         site_name
+      }
+    }
+    allContentfulSkills(sort: { fields: category }) {
+      edges {
+        node {
+          id
+          category
+          name
+          expertiseLevel
+        }
       }
     }
     allContentfulPositions(sort: { fields: orderId, order: DESC }) {
