@@ -31,17 +31,4 @@ function toPascalCase(string) {
   return toCamelCase(string.replace(/^[a-z]/, $0 => $0.toUpperCase()))
 }
 
-/**
- *  Converts letter case-seperated `string` to kebab case
- *
- *  @example
- *  'fooBar' => 'foo-bar'
- *  'FooBar' => 'foo-bar'
- *
- *  @param {string} string
- */
-// function toKebabCase(string) {
-//   return string.replace(/^[A-Z]/, $0 => $0.toLowerCase()).replace(/(?<=\w)[A-Z]/g, $0 => `-${$0.toLowerCase()}`);
-// }
-
 export { toCamelCase, toPascalCase }

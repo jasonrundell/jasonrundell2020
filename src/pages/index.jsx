@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 
 import Components from '../components'
 
+import { edgesToObject } from '../utils/graphql'
+
 const {
   Layout,
   Links,
@@ -19,6 +21,9 @@ const { Title, Paragraph } = Typography
 const { ExternalLink } = Links
 
 export default ({ data }) => {
+  const positions = edgesToObject(data.allContentfulPositions.edges)
+  const skills = edgesToObject(data.allContentfulSkills.edges)
+  const references = edgesToObject(data.allContentfulReferences.edges)
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <SEO
@@ -79,7 +84,7 @@ export default ({ data }) => {
               </Paragraph>
             </Row>
             <Row>
-              <Skills />
+              <Skills skills={skills} />
             </Row>
           </Box>
         </Container>
@@ -91,7 +96,7 @@ export default ({ data }) => {
               <Title>Experience</Title>
             </Row>
             <Row>
-              <Positions />
+              <Positions positions={positions} />
             </Row>
           </Box>
         </Container>
@@ -104,7 +109,7 @@ export default ({ data }) => {
               <Title>References</Title>
             </Row>
             <Row>
-              <References />
+              <References references={references} />
             </Row>
           </Box>
         </Container>
@@ -173,6 +178,40 @@ export const pageQuery = graphql`
       siteMetadata {
         author
         site_name
+      }
+    }
+    allContentfulSkills(sort: { fields: category }) {
+      edges {
+        node {
+          id
+          category
+          name
+          expertiseLevel
+        }
+      }
+    }
+    allContentfulPositions(sort: { fields: orderId, order: DESC }) {
+      edges {
+        node {
+          id
+          orderId
+          role
+          company
+          startDate
+          endDate
+        }
+      }
+    }
+    allContentfulReferences(sort: { fields: id }) {
+      edges {
+        node {
+          id
+          quote {
+            json
+          }
+          citeName
+          company
+        }
       }
     }
   }

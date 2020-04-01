@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 
 import Blockquote from '../Blockquote'
 import Contentful from '../Contentful'
@@ -10,15 +9,13 @@ import styles from './References.module.scss'
 
 const { RichText } = Contentful
 
-const References = ({ data }) => {
-  const allReferences = data.allContentfulReferences.edges
-
+const References = ({ references }) => {
   return (
     <>
       <ul className={styles.list}>
-        {allReferences.map(reference => {
-          const { id, citeName, company } = reference.node
-          const quote = reference.node.quote.json
+        {references.map(reference => {
+          const { id, citeName, company } = reference
+          const quote = reference.quote.json
 
           return (
             <li key={id} className={styles.item}>
@@ -36,31 +33,15 @@ const References = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        allContentfulReferences(sort: { fields: id }) {
-          edges {
-            node {
-              id
-              quote {
-                json
-              }
-              citeName
-              company
-            }
-          }
-        }
-      }
-    `}
-    render={data => <References data={data} {...props} />}
-  />
-)
 References.propTypes = {
-  data: PropTypes.shape({
-    allContentfulReferences: PropTypes.shape({
-      edges: PropTypes.arrayOf(PropTypes.object).isRequired,
-    }).isRequired,
-  }).isRequired,
+  references: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      quote: PropTypes.shape({ json: PropTypes.json }).isRequired,
+      citeName: PropTypes.string.isRequired,
+      company: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 }
+
+export default References
