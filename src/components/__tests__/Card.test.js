@@ -1,68 +1,62 @@
 import React from 'react'
-import { unmountComponentAtNode } from 'react-dom'
-import { create } from 'react-test-renderer'
+import { render, unmountComponentAtNode } from 'react-dom'
+import { act } from 'react-dom/test-utils'
+import { catchWarnings } from './test-utils'
+// import { create } from 'react-test-renderer'
 
 import Card from '../Card'
 
+catchWarnings()
+
 let container = null
 beforeEach(() => {
-  // setup a DOM element as a render target
   container = document.createElement('div')
   document.body.appendChild(container)
 })
 
 afterEach(() => {
-  // cleanup on exiting
   unmountComponentAtNode(container)
   container.remove()
   container = null
 })
 
-describe('Card component', () => {
-  test('Matches the snapshot', () => {
-    const component = create(<Card>Card child</Card>)
-    expect(component.toJSON()).toMatchSnapshot()
+describe('Badge component', () => {
+  it('Card has required children', () => {
+    act(() => {
+      render(<Card>Card component</Card>, container)
+    })
+    expect(container.textContent).toBe('Card component')
   })
 
-  test(`elevation prop of 0 renders correctly`, () => {
-    const testRenderer = create(<Card elevation={0}>Card child</Card>)
-    const testInstance = testRenderer.root
-    expect(testInstance.findByType(Card).props.elevation).toBe(0)
-  })
+  it('Card elevations work', () => {
+    act(() => {
+      render(<Card elevation={0}>Elevation 0</Card>, container)
+    })
+    expect(container.textContent).toBe('Elevation 0')
 
-  test(`elevation prop of 1 renders correctly`, () => {
-    const testRenderer = create(<Card elevation={1}>Card child</Card>)
-    const testInstance = testRenderer.root
-    expect(testInstance.findByType(Card).props.elevation).toBe(1)
-  })
+    act(() => {
+      render(<Card elevation={1}>Elevation 1</Card>, container)
+    })
+    expect(container.textContent).toBe('Elevation 1')
 
-  test(`elevation prop of 2 renders correctly`, () => {
-    const testRenderer = create(<Card elevation={2}>Card child</Card>)
-    const testInstance = testRenderer.root
-    expect(testInstance.findByType(Card).props.elevation).toBe(2)
-  })
+    act(() => {
+      render(<Card elevation={2}>Elevation 2</Card>, container)
+    })
+    expect(container.textContent).toBe('Elevation 2')
 
-  test(`elevation prop of 3 renders correctly`, () => {
-    const testRenderer = create(<Card elevation={3}>Card child</Card>)
-    const testInstance = testRenderer.root
-    expect(testInstance.findByType(Card).props.elevation).toBe(3)
-  })
+    act(() => {
+      render(<Card elevation={3}>Elevation 3</Card>, container)
+    })
+    expect(container.textContent).toBe('Elevation 3')
 
-  test(`elevation prop of 4 renders correctly`, () => {
-    const testRenderer = create(<Card elevation={4}>Card child</Card>)
-    const testInstance = testRenderer.root
-    expect(testInstance.findByType(Card).props.elevation).toBe(4)
-  })
+    act(() => {
+      render(<Card elevation={4}>Elevation 4</Card>, container)
+    })
+    expect(container.textContent).toBe('Elevation 4')
 
-  test(`elevation prop of 5 renders correctly`, () => {
-    const testRenderer = create(<Card elevation={5}>Card child</Card>)
-    const testInstance = testRenderer.root
-    expect(testInstance.findByType(Card).props.elevation).toBe(5)
-  })
-
-  test(`isElevationAnimated prop of true renders correctly`, () => {
-    const testRenderer = create(<Card isElevationAnimated>Card child</Card>)
-    const testInstance = testRenderer.root
-    expect(testInstance.findByType(Card).props.isElevationAnimated).toBe(true)
+    act(() => {
+      render(<Card elevation={5}>Elevation 5</Card>, container)
+    })
+    expect(container.textContent).toBe('Elevation 5')
   })
 })
