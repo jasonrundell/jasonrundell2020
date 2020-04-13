@@ -26,7 +26,7 @@ describe('Cite component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('Cite has required children', () => {
+  it('Cite has required children prop', () => {
     act(() => {
       render(<Cite>Cite component</Cite>, container)
     })

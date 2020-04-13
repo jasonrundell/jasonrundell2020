@@ -26,7 +26,7 @@ describe('Card component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('Card has required children', () => {
+  it('Card has required children prop', () => {
     act(() => {
       render(<Card>Card component</Card>, container)
     })

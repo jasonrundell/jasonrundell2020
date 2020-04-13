@@ -28,7 +28,7 @@ describe('Blockquote component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('Blockquote has required children', () => {
+  it('Blockquote has required children prop', () => {
     act(() => {
       render(<Blockquote>Blockquote component</Blockquote>, container)
     })

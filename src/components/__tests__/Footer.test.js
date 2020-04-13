@@ -26,7 +26,7 @@ describe('Footer component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('Footer has required children', () => {
+  it('Footer has required children prop', () => {
     act(() => {
       render(<Footer>Footer component</Footer>, container)
     })

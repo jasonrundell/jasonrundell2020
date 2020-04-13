@@ -26,7 +26,7 @@ describe('Main component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('Main has required children', () => {
+  it('Main has required children prop', () => {
     act(() => {
       render(<Main>Main component</Main>, container)
     })
