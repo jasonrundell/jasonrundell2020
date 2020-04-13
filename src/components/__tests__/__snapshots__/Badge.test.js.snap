@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge component Badge renders correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="root tight"
+  >
+    icon
+  </div>
+</div>
+`;

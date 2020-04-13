@@ -1,6 +1,7 @@
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
+import renderer from 'react-test-renderer'
 import { catchWarnings } from '../../utils/test-utils'
 
 import Card from '../Card'
@@ -20,6 +21,11 @@ afterEach(() => {
 })
 
 describe('Card component', () => {
+  it('Card renders correctly', () => {
+    const tree = renderer.create(<Card>Card component</Card>).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
   it('Card has required children', () => {
     act(() => {
       render(<Card>Card component</Card>, container)
