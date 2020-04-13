@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
-import { catchWarnings } from './test-utils'
+import { catchWarnings } from '../../utils/test-utils'
 
 import Card from '../Card'
 

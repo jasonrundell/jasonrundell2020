@@ -1,5 +1,6 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
+import { catchWarnings } from '../../utils/test-utils'
 
 import Badge from '../Badge'
 
