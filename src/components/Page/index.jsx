@@ -55,7 +55,7 @@ const Page = ({ children }) => {
 }
 
 Page.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.array.isRequired,
 }
 
 export default Page
