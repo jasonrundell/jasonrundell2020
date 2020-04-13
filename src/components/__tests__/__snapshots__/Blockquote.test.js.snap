@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Blockquote component Matches the snapshot 1`] = `
-<blockquote
-  className="root"
->
-  Blockquote child
-</blockquote>
-`;
