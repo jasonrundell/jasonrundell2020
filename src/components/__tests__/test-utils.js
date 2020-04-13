@@ -15,3 +15,9 @@ export function catchWarnings() {
     }
   })
 }
+
+/**
+ * Mix an match help from:
+ * https://daveceddia.com/testing-for-proptypes-errors/
+ * https://www.jackfranklin.co.uk/blog/failing-tests-on-react-proptypes/
+ */
