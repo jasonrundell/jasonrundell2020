@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Positions component Positions renders correctly 1`] = `
+<ul
+  className="list"
+>
+  <li
+    className="item"
+  >
+    <h2
+      className="h2"
+    >
+      Business Owner
+    </h2>
+    <span
+      className="company"
+    >
+      Code Summoner Corp.
+    </span>
+    <br />
+    <span
+      className="startDate"
+    >
+      April 2012
+    </span>
+     -
+     
+    <span
+      className="endDate"
+    >
+      Present
+    </span>
+  </li>
+  <li
+    className="item"
+  >
+    <h2
+      className="h2"
+    >
+      Senior Front End Web Developer
+    </h2>
+    <span
+      className="company"
+    >
+      Intuit
+    </span>
+    <br />
+    <span
+      className="startDate"
+    >
+      July 2019
+    </span>
+     -
+     
+    <span
+      className="endDate"
+    >
+      Present
+    </span>
+  </li>
+</ul>
+`;
