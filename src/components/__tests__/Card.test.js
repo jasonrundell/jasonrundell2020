@@ -2,7 +2,6 @@ import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import { catchWarnings } from './test-utils'
-// import { create } from 'react-test-renderer'
 
 import Card from '../Card'
 
@@ -20,7 +19,7 @@ afterEach(() => {
   container = null
 })
 
-describe('Badge component', () => {
+describe('Card component', () => {
   it('Card has required children', () => {
     act(() => {
       render(<Card>Card component</Card>, container)
@@ -28,7 +27,7 @@ describe('Badge component', () => {
     expect(container.textContent).toBe('Card component')
   })
 
-  it('Card elevations work', () => {
+  it('Card elevations prop', () => {
     act(() => {
       render(<Card elevation={0}>Elevation 0</Card>, container)
     })
@@ -58,5 +57,23 @@ describe('Badge component', () => {
       render(<Card elevation={5}>Elevation 5</Card>, container)
     })
     expect(container.textContent).toBe('Elevation 5')
+  })
+
+  it('Card isElevationAnimated prop', () => {
+    act(() => {
+      render(
+        <Card isElevationAnimated={true}>isElevationAnimated true</Card>,
+        container
+      )
+    })
+    expect(container.textContent).toBe('isElevationAnimated true')
+
+    act(() => {
+      render(
+        <Card isElevationAnimated={false}>isElevationAnimated false</Card>,
+        container
+      )
+    })
+    expect(container.textContent).toBe('isElevationAnimated false')
   })
 })
