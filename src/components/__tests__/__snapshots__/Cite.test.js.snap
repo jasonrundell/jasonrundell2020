@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cite component Cite renders correctly 1`] = `
+<cite>
+  Cite component
+</cite>
+`;
