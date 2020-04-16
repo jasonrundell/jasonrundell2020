@@ -26,7 +26,7 @@ describe('Header component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('Header has required children', () => {
+  it('Header has required children prop', () => {
     act(() => {
       render(<Header>Header component</Header>, container)
     })
