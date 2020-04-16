@@ -20,7 +20,7 @@ afterEach(() => {
   container = null
 })
 
-const testPositionData = [
+const testData = [
   {
     id: '21694cf0-7b34-5678-ab04-114728a8802c',
     orderId: 7,
@@ -41,15 +41,13 @@ const testPositionData = [
 
 describe('Positions component', () => {
   it('Positions renders correctly', () => {
-    const tree = renderer
-      .create(<Positions positions={testPositionData} />)
-      .toJSON()
+    const tree = renderer.create(<Positions positions={testData} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('Positions has required positions prop', () => {
     act(() => {
-      render(<Positions positions={testPositionData} />, container)
+      render(<Positions positions={testData} />, container)
     })
   })
 })
