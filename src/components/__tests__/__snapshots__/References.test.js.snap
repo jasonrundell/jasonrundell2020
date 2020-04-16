@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`References component References renders correctly 1`] = `
+<ul
+  className="list"
+>
+  <li
+    className="item"
+  >
+    <blockquote
+      className="root"
+    >
+      <p
+        className="root"
+      >
+        Jason brings a creativity to technology rarely seen in many developers. Jason continues to be a resource that I count on not only from a development perspective but also a trusted advisor for future development and the evolution of our technology platforms.
+      </p>
+    </blockquote>
+    <cite
+      className="cite"
+    >
+      - 
+      Gregg Tilston
+       (
+      Flight Centre Ltd.
+      )
+    </cite>
+  </li>
+</ul>
+`;
