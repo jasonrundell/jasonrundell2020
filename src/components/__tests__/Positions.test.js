@@ -23,7 +23,7 @@ afterEach(() => {
 const testData = [
   {
     id: '21694cf0-7b34-5678-ab04-114728a8802c',
-    orderId: 7,
+    orderId: 1,
     role: 'Business Owner',
     company: 'Code Summoner Corp.',
     startDate: 'April 2012',
@@ -31,7 +31,7 @@ const testData = [
   },
   {
     id: 'bc304f5c-5089-534e-be51-e7754a84a045',
-    orderId: 6,
+    orderId: 2,
     role: 'Senior Front End Web Developer',
     company: 'Intuit',
     startDate: 'July 2019',
