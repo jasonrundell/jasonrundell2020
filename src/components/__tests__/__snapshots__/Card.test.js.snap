@@ -1,9 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card component Card renders correctly 1`] = `
-<div
-  className="root elevation2 animation"
->
-  Card component
+<div>
+  <div
+    className="root elevation2 animation"
+  >
+    Card component
+  </div>
+  <div
+    className="root elevation0 animation"
+  >
+    Elevation 0
+  </div>
+  <div
+    className="root elevation2 animation"
+  >
+    isElevationAnimated true
+  </div>
+  <div
+    className="root elevation2"
+  >
+    isElevationAnimated false
+  </div>
 </div>
 `;

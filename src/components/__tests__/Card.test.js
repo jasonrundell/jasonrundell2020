@@ -22,7 +22,16 @@ afterEach(() => {
 
 describe('Card component', () => {
   it('Card renders correctly', () => {
-    const tree = renderer.create(<Card>Card component</Card>).toJSON()
+    const tree = renderer
+      .create(
+        <div>
+          <Card>Card component</Card>
+          <Card elevation={0}>Elevation 0</Card>
+          <Card isElevationAnimated>isElevationAnimated true</Card>
+          <Card isElevationAnimated={false}>isElevationAnimated false</Card>
+        </div>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
