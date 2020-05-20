@@ -19,7 +19,7 @@ const { ExternalLink } = Links
 const Page = ({ children }) => {
   return (
     <div className={styles.root}>
-      <SkipToMain />
+      <SkipToMain>Skip to main content</SkipToMain>
       <Header>
         <Container>
           <Box>

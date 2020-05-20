@@ -65,6 +65,13 @@ export default ({ data }) => {
                 challenge, and love technology!
               </Paragraph>
             </Row>
+            <Row>
+              <Paragraph>
+                <ExternalLink url="https://github.com/jasonrundell?tab=repositories">
+                  View my Open Source work on GitHub
+                </ExternalLink>
+              </Paragraph>
+            </Row>
           </Box>
         </Container>
         <Spacer sizeLarge="largest" />

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section component Section renders correctly 1`] = `
+<div>
+  <section
+    className="root"
+    id={null}
+  >
+    Section component
+  </section>
+  <section
+    className="root"
+    id="thisistheid"
+  >
+    Section with id
+  </section>
+  <section
+    className="root class__name--test"
+    id={null}
+  >
+    Section with className
+  </section>
+</div>
+`;
