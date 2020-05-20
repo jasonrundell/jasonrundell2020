@@ -68,7 +68,7 @@ export default ({ data }) => {
             <Row>
               <Paragraph>
                 <ExternalLink url="https://github.com/jasonrundell?tab=repositories">
-                  View my Open Source work on GitHub
+                  View my open-source work on GitHub
                 </ExternalLink>
               </Paragraph>
             </Row>
