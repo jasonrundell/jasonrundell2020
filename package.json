@@ -6,7 +6,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
     "@contentful/rich-text-types": "^14.1.1",
-    "contentful": "^7.14.0",
+    "contentful": "^7.14.4",
     "gatsby": "^2.23.10",
     "gatsby-plugin-load-script": "^1.1.0",
     "gatsby-plugin-manifest": "^2.4.13",
@@ -28,11 +28,11 @@
   "devDependencies": {
     "babel-jest": "^26.1.0",
     "babel-preset-gatsby": "^0.4.11",
-    "cross-env": "^7.0.0",
+    "cross-env": "^7.0.2",
     "eslint": "^7.3.1",
     "gatsby-plugin-react-axe": "0.4.1",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
-    "husky": "^4.2.3",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
     "jrun-normalize": "^9.2.0",
