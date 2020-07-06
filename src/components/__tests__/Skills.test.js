@@ -25,19 +25,16 @@ const testData = [
     id: 'eb882bd6-c391-5613-9795-2dd6cd134e54',
     category: 'APIs',
     name: 'Facebook',
-    expertiseLevel: 'P',
   },
   {
     id: 'f4f7b181-cc7d-57ce-9d59-15a9916fbec1',
     category: 'APIs',
     name: 'Slack',
-    expertiseLevel: 'I',
   },
   {
     id: 'd4b52d23-aa82-5539-badb-48382003d372',
     category: 'APIs',
     name: 'Google Places',
-    expertiseLevel: 'P',
   },
 ]
 
