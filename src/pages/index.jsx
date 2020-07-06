@@ -193,7 +193,6 @@ export const pageQuery = graphql`
           id
           category
           name
-          expertiseLevel
         }
       }
     }
