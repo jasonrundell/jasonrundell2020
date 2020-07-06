@@ -1,209 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Skills component Skills renders correctly 1`] = `
-Array [
+<div
+  className="root start"
+>
   <div
-    className="root start"
-  >
-    <ul
-      className="root horizontal"
-    >
-      <li
-        className="listItem"
-      >
-        <div
-          className="root tight"
-        >
-          <div
-            className="root inverse"
-          >
-            <div
-              className="root tight"
-            >
-              E
-            </div>
-          </div>
-        </div>
-        <div
-          className="root tight"
-        >
-          <span>
-            Expert
-          </span>
-        </div>
-      </li>
-      <li
-        className="listItem"
-      >
-        <div
-          className="root tight"
-        >
-          <div
-            className="root inverse"
-          >
-            <div
-              className="root tight"
-            >
-              A
-            </div>
-          </div>
-        </div>
-        <div
-          className="root tight"
-        >
-          <span>
-            Advanced
-          </span>
-        </div>
-      </li>
-      <li
-        className="listItem"
-      >
-        <div
-          className="root tight"
-        >
-          <div
-            className="root inverse"
-          >
-            <div
-              className="root tight"
-            >
-              P
-            </div>
-          </div>
-        </div>
-        <div
-          className="root tight"
-        >
-          <span>
-            Proficient
-          </span>
-        </div>
-      </li>
-      <li
-        className="listItem"
-      >
-        <div
-          className="root tight"
-        >
-          <div
-            className="root inverse"
-          >
-            <div
-              className="root tight"
-            >
-              I
-            </div>
-          </div>
-        </div>
-        <div
-          className="root tight"
-        >
-          <span>
-            Intermediate
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>,
-  <div
-    className="root start"
+    className="root col1 colMedium2 colLarge3 breakInside__avoid"
   >
     <div
-      className="root col1 colMedium2 colLarge3 breakInside__avoid"
+      className="list"
     >
-      <div
+      <h2
+        className="h2"
+      >
+        APIs
+      </h2>
+      <ul
         className="list"
       >
-        <h2
-          className="h2"
+        <li
+          className="item"
         >
-          APIs
-        </h2>
-        <ul
-          className="list"
+          <div
+            className="root tight"
+          >
+            <span
+              className="itemText"
+            >
+              Facebook
+            </span>
+          </div>
+        </li>
+        <li
+          className="item"
         >
-          <li
-            className="item"
+          <div
+            className="root tight"
           >
-            <div
-              className="root tight"
+            <span
+              className="itemText"
             >
-              <div
-                className="root inverse"
-              >
-                <div
-                  className="root tight"
-                >
-                  P
-                </div>
-              </div>
-            </div>
-            <div
-              className="root tight"
-            >
-              <span
-                className="itemText"
-              >
-                Facebook
-              </span>
-            </div>
-          </li>
-          <li
-            className="item"
+              Slack
+            </span>
+          </div>
+        </li>
+        <li
+          className="item"
+        >
+          <div
+            className="root tight"
           >
-            <div
-              className="root tight"
+            <span
+              className="itemText"
             >
-              <div
-                className="root inverse"
-              >
-                <div
-                  className="root tight"
-                >
-                  I
-                </div>
-              </div>
-            </div>
-            <div
-              className="root tight"
-            >
-              <span
-                className="itemText"
-              >
-                Slack
-              </span>
-            </div>
-          </li>
-          <li
-            className="item"
-          >
-            <div
-              className="root tight"
-            >
-              <div
-                className="root inverse"
-              >
-                <div
-                  className="root tight"
-                >
-                  P
-                </div>
-              </div>
-            </div>
-            <div
-              className="root tight"
-            >
-              <span
-                className="itemText"
-              >
-                Google Places
-              </span>
-            </div>
-          </li>
-        </ul>
-      </div>
+              Google Places
+            </span>
+          </div>
+        </li>
+      </ul>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
