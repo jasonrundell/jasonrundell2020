@@ -17,6 +17,7 @@ ExternalLink.defaultProps = {
 }
 
 ExternalLink.propTypes = {
+  url: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
   rel: PropTypes.string,
   target: PropTypes.string,
