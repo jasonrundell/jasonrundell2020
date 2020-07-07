@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExternalLink component ExternalLink renders correctly 1`] = `
+<div>
+  <a
+    className="root"
+    href="/"
+    rel={null}
+    target={null}
+  >
+    ExternalLink component /
+  </a>
+  <a
+    className="root"
+    href="/"
+    rel="noopener noreferrer"
+    target={null}
+  >
+    ExternalLink component rel = noopener noreferrer
+  </a>
+  <a
+    className="root"
+    href="/"
+    rel={null}
+    target="_blank"
+  >
+    ExternalLink component target = _blank
+  </a>
+</div>
+`;
