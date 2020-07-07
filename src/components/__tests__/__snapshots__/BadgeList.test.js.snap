@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BadgeList component BadgeList renders correctly 1`] = `
+<div>
+  <ul
+    className="root"
+  >
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root"
+        >
+          <div
+            className="root tight"
+          >
+            ⭐
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Star
+        </span>
+      </div>
+    </li>
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root"
+        >
+          <div
+            className="root tight"
+          >
+            😀
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Smiley
+        </span>
+      </div>
+    </li>
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root"
+        >
+          <div
+            className="root tight"
+          >
+            💫
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Dizzy
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
