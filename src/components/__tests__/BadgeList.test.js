@@ -1,6 +1,5 @@
 import React from 'react'
-import { render, unmountComponentAtNode } from 'react-dom'
-import { act } from 'react-dom/test-utils'
+import { unmountComponentAtNode } from 'react-dom'
 import renderer from 'react-test-renderer'
 import { catchWarnings } from '../../utils/test-utils'
 
