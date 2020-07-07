@@ -44,6 +44,8 @@ describe('BadgeList component', () => {
       .create(
         <div>
           <BadgeList list={listData} />
+          <BadgeList list={listData} isHorizontal={true} />
+          <BadgeList list={listData} isInverse={true} />
         </div>
       )
       .toJSON()

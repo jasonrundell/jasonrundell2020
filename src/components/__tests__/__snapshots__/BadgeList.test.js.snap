@@ -78,5 +78,157 @@ exports[`BadgeList component BadgeList renders correctly 1`] = `
       </div>
     </li>
   </ul>
+  <ul
+    className="root horizontal"
+  >
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root"
+        >
+          <div
+            className="root tight"
+          >
+            ⭐
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Star
+        </span>
+      </div>
+    </li>
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root"
+        >
+          <div
+            className="root tight"
+          >
+            😀
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Smiley
+        </span>
+      </div>
+    </li>
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root"
+        >
+          <div
+            className="root tight"
+          >
+            💫
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Dizzy
+        </span>
+      </div>
+    </li>
+  </ul>
+  <ul
+    className="root"
+  >
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root inverse"
+        >
+          <div
+            className="root tight"
+          >
+            ⭐
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Star
+        </span>
+      </div>
+    </li>
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root inverse"
+        >
+          <div
+            className="root tight"
+          >
+            😀
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Smiley
+        </span>
+      </div>
+    </li>
+    <li
+      className="listItem"
+    >
+      <div
+        className="root tight"
+      >
+        <div
+          className="root inverse"
+        >
+          <div
+            className="root tight"
+          >
+            💫
+          </div>
+        </div>
+      </div>
+      <div
+        className="root tight"
+      >
+        <span>
+          Dizzy
+        </span>
+      </div>
+    </li>
+  </ul>
 </div>
 `;
