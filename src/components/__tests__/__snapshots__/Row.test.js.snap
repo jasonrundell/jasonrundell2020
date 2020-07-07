@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row component Row renders correctly 1`] = `
+<div>
+  <div
+    className="root start"
+  >
+    Row component
+  </div>
+  <div
+    className="root start"
+  >
+    Row component justify=
+    start
+  </div>
+  <div
+    className="root spaceEvenly"
+  >
+    Row component justify=
+    spaceEvenly
+  </div>
+</div>
+`;
