@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph component Paragraph renders correctly 1`] = `
+<p
+  className="root"
+>
+  Paragraph component
+</p>
+`;
