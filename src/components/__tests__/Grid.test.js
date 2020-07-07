@@ -38,7 +38,7 @@ describe('Grid component', () => {
             <div>Item</div>
             <div>Item</div>
           </Grid>
-          <Grid columnCount={columnRules[columnRules.length]}>
+          <Grid columnCount={columnRules[columnRules.length - 1]}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
@@ -48,7 +48,7 @@ describe('Grid component', () => {
             <div>Item</div>
             <div>Item</div>
           </Grid>
-          <Grid mediumColumnCount={columnRules[columnRules.length]}>
+          <Grid mediumColumnCount={columnRules[columnRules.length - 1]}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
@@ -58,7 +58,7 @@ describe('Grid component', () => {
             <div>Item</div>
             <div>Item</div>
           </Grid>
-          <Grid largeColumnCount={columnRules[columnRules.length]}>
+          <Grid largeColumnCount={columnRules[columnRules.length - 1]}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
@@ -68,7 +68,7 @@ describe('Grid component', () => {
             <div>Item</div>
             <div>Item</div>
           </Grid>
-          <Grid breakInside={breakInsideRules[breakInsideRules.length]}>
+          <Grid breakInside={breakInsideRules[breakInsideRules.length - 1]}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
