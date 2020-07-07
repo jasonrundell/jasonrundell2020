@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote component Quote renders correctly 1`] = `
+<div>
+  <blockquote
+    className="root"
+  >
+    Quote component
+    <footer>
+      Footer prefix
+      <cite>
+        Cite text
+      </cite>
+      Footer affix
+    </footer>
+  </blockquote>
+</div>
+`;
