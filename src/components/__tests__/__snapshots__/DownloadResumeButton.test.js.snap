@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadResumeButton component DownloadResumeButton renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "textAlign": "right",
+      "width": "100%",
+    }
+  }
+>
+  <a
+    className="root"
+    href="/jason-rundell-web-developer-resume.pdf"
+  >
+    <span
+      className="text"
+    >
+      Download résumé
+    </span>
+    <svg
+      className="arrowIcon"
+      height="32"
+      viewBox="0 0 32 32"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        stroke="#e9be62"
+        strokeLinejoin="round"
+        strokeMiterlimit="10"
+        strokeWidth="1.5"
+      >
+        <circle
+          className="arrowIconCircle"
+          cx="16"
+          cy="16"
+          r="14.12"
+        />
+        <path
+          className="arrowIconArrow"
+          d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+        />
+      </g>
+    </svg>
+  </a>
+</div>
+`;
