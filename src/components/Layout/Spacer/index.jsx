@@ -1,10 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Rules from './prop-rules'
+
 import { classNames } from '../../../utils/css'
 import { toCamelCase } from '../../../utils/format'
 
 import styles from './Spacer.module.scss'
+
+const { heightRules } = Rules
 
 const Spacer = ({ sizeSmall, sizeMedium, sizeLarge }) => {
   const classes = classNames(
@@ -16,26 +20,16 @@ const Spacer = ({ sizeSmall, sizeMedium, sizeLarge }) => {
   return <div className={classes} />
 }
 
-const heightValues = [
-  'smallest',
-  'smaller',
-  'small',
-  'normal',
-  'large',
-  'larger',
-  'largest',
-]
-
 Spacer.defaultProps = {
-  sizeSmall: 'small',
-  sizeMedium: 'normal',
-  sizeLarge: 'large',
+  sizeSmall: heightRules[2],
+  sizeMedium: heightRules[3],
+  sizeLarge: heightRules[4],
 }
 
 Spacer.propTypes = {
-  sizeSmall: PropTypes.oneOf(heightValues),
-  sizeMedium: PropTypes.oneOf(heightValues),
-  sizeLarge: PropTypes.oneOf(heightValues),
+  sizeSmall: PropTypes.oneOf(heightRules),
+  sizeMedium: PropTypes.oneOf(heightRules),
+  sizeLarge: PropTypes.oneOf(heightRules),
 }
 
 export default Spacer

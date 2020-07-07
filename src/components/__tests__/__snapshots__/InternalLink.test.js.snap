@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InternalLink component InternalLink renders correctly 1`] = `
+<a
+  className="root"
+  href="/"
+>
+  InternalLink component /
+</a>
+`;

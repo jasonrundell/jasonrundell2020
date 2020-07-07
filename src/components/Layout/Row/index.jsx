@@ -1,9 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Rules from './prop-rules'
+
 import { classNames } from '../../../utils/css'
 
 import styles from './Row.module.scss'
+
+const { justifyRules } = Rules
 
 const Row = ({ justify, children }) => {
   const classes = classNames(styles.root, styles[justify])
@@ -12,18 +16,11 @@ const Row = ({ justify, children }) => {
 }
 
 Row.defaultProps = {
-  justify: 'start',
+  justify: justifyRules[0],
 }
 
 Row.propTypes = {
-  justify: PropTypes.oneOf([
-    'start',
-    'end',
-    'center',
-    'spaceAround',
-    'spaceBetween',
-    'spaceEvenly',
-  ]),
+  justify: PropTypes.oneOf(justifyRules),
   children: PropTypes.any.isRequired,
 }
 

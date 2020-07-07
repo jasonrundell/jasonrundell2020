@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Rules from './prop-rules'
+
 import { classNames } from '../../../utils/css'
 
 import styles from './Grid.module.scss'
 
-const columns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+const { columnRules, breakInsideRules } = Rules
 
 const Grid = ({
   columnCount,
@@ -37,19 +39,10 @@ Grid.defaultProps = {
 }
 
 Grid.propTypes = {
-  columnCount: PropTypes.oneOf(columns),
-  mediumColumnCount: PropTypes.oneOf(columns),
-  largeColumnCount: PropTypes.oneOf(columns),
-  breakInside: PropTypes.oneOf([
-    'auto',
-    'avoid',
-    'avoid-page',
-    'avoid-column',
-    'avoid-region',
-    'inherit',
-    'initial',
-    'unset',
-  ]),
+  columnCount: PropTypes.oneOf(columnRules),
+  mediumColumnCount: PropTypes.oneOf(columnRules),
+  largeColumnCount: PropTypes.oneOf(columnRules),
+  breakInside: PropTypes.oneOf(breakInsideRules),
   children: PropTypes.any.isRequired,
 }
 

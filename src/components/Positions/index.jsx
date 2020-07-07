@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import Typography from '../Typography'
 
-// CSS
 import styles from './Positions.module.scss'
 
 const { Title } = Typography
@@ -11,7 +10,7 @@ const { Title } = Typography
 const Positions = ({ positions }) => {
   return (
     <ul className={styles.list}>
-      {positions.map(position => {
+      {positions.map((position) => {
         const { id, role, company, startDate, endDate } = position
         return (
           <li key={id} className={styles.item}>

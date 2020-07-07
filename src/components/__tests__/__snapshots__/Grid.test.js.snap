@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid component Grid renders correctly 1`] = `
+<div>
+  <div
+    className="root col1 colMedium1 colLarge1"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col1 colMedium1 colLarge1"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col12 colMedium1 colLarge1"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col1 colMedium1 colLarge1"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col1 colMedium12 colLarge1"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col1 colMedium1 colLarge1"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col1 colMedium1 colLarge12"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col1 colMedium1 colLarge1 breakInside__auto"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    className="root col1 colMedium1 colLarge1 breakInside__unset"
+  >
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+    <div>
+      Item
+    </div>
+  </div>
+</div>
+`;

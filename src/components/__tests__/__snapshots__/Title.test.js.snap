@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component Title renders correctly 1`] = `
+<div>
+  <h1
+    className="h1"
+  >
+    Title component
+  </h1>
+  <h1
+    className="h1"
+  >
+    Title component level 1
+  </h1>
+  <h2
+    className="h2"
+  >
+    Title component level 2
+  </h2>
+  <h3
+    className="h3"
+  >
+    Title component level 3
+  </h3>
+  <h4
+    className="h4"
+  >
+    Title component level 4
+  </h4>
+</div>
+`;

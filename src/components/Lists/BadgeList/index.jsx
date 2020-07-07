@@ -14,7 +14,7 @@ const BadgeList = ({ list, isHorizontal, isInverse }) => {
   const classes = classNames(styles.root, isHorizontal && styles.horizontal)
   return (
     <ul className={classes}>
-      {list.map(item => (
+      {list.map((item) => (
         <li className={styles.listItem} key={item.id}>
           <Box isTight>
             <Badge icon={item.icon} isInverse={isInverse} />
@@ -34,7 +34,13 @@ BadgeList.defaultProps = {
 }
 
 BadgeList.propTypes = {
-  list: PropTypes.array.isRequired,
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   isHorizontal: PropTypes.bool,
   isInverse: PropTypes.bool,
 }
