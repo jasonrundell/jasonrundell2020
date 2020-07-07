@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer component Spacer renders correctly 1`] = `
+<div>
+  <div
+    className="root smallSmall mediumNormal largeLarge"
+  />
+  <div
+    className="root smallSmall mediumNormal largeSmallest"
+  />
+  <div
+    className="root smallSmall mediumNormal largeLargest"
+  />
+</div>
+`;
