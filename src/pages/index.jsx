@@ -180,7 +180,7 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query PageHomeQuery {
     site {
       siteMetadata {
         author
