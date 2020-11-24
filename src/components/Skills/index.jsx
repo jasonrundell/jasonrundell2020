@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Layout from '../Layout'
 import Typography from '../Typography'
-import onlyUnique from '../../utils/unique'
+import { onlyUnique } from '../../utils/unique'
 
 // CSS
 import styles from './Skills.module.scss'
