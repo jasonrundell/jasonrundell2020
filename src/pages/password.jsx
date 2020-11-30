@@ -1,17 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { generatePassword } from '../utils/unique'
 
 // Components
 import Components from '../components'
 
-const { Layout, Links, Page, Section, SEO, Typography } = Components
+const { Layout, Links, Page, Section, SEO, Typography, Button } = Components
 const { Box, Container, Row, Spacer } = Layout
 const { Title, Paragraph } = Typography
 const { ExternalLink } = Links
-const GenberatePassword = generatePassword
+const GeneratePassword = generatePassword
 
 export default ({ data }) => {
+  const thePasswordLength = 24
+
+  const [thePassword, setThePassword] = useState(thePasswordLength)
+
+  const handleUpdatePassword = (passwordLength) => {
+    setThePassword(1)
+    setTimeout(() => {
+      setThePassword(passwordLength)
+    }, 100)
+  }
+
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <SEO
@@ -28,30 +39,21 @@ export default ({ data }) => {
               <Title>{data.site.siteMetadata.site_name}</Title>
             </Row>
             <Row>
-              <Title level={2}>Password Generator</Title>
+              <Title level={2}>
+                {thePasswordLength} Character Password Generator
+              </Title>
             </Row>
             <Row>
-              <Paragraph>8, 12, 16, 24</Paragraph>
               <Paragraph>
                 <code>
-                  <GenberatePassword passwordLength={8} />
+                  <GeneratePassword passwordLength={thePassword} />
                 </code>
               </Paragraph>
-              <Paragraph>
-                <code>
-                  <GenberatePassword passwordLength={12} />
-                </code>
-              </Paragraph>
-              <Paragraph>
-                <code>
-                  <GenberatePassword passwordLength={16} />
-                </code>
-              </Paragraph>
-              <Paragraph>
-                <code>
-                  <GenberatePassword passwordLength={24} />
-                </code>
-              </Paragraph>
+            </Row>
+            <Row>
+              <Button onClick={() => handleUpdatePassword(thePasswordLength)}>
+                Reload
+              </Button>
             </Row>
           </Box>
         </Container>
