@@ -20,7 +20,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-axe`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-webpack-bundle-analyzer`,
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        openAnalyzer: true,
+      },
+    },
     {
       resolve: 'gatsby-plugin-sass',
       options: {
