@@ -1,5 +1,6 @@
 import Badge from './Badge'
 import Blockquote from './Blockquote'
+import Button from './Button'
 import Card from './Card'
 import Cite from './Cite'
 import Contentful from './Contentful'
@@ -24,6 +25,7 @@ import Typography from './Typography'
 export default {
   Badge,
   Blockquote,
+  Button,
   Card,
   Cite,
   Contentful,

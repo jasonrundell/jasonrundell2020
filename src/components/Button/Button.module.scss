@@ -1,0 +1,34 @@
+.root {
+  display: block;
+  font-size: $sizeSmaller;
+  padding: 1rem;
+  background: $colorPrime;
+  border: 1px solid $colorPrimeLight;
+  border-radius: $sizeSmallest;
+  cursor: pointer;
+
+  @media (min-width: $mediumBreakpoint) {
+    font-size: $sizeSmall;
+  }
+
+  &:hover,
+  &:focus {
+    background: $colorPrimeLight;
+    border-color: $accentColorPrime;
+  }
+
+  &:active {
+    color: $accentColorDark;
+    background: $colorPrimeDarker;
+  }
+
+  &.active {
+    color: $accentColorDark;
+    background: $colorPrimeLight;
+    border-color: $accentColorPrime;
+  }
+}
+
+.text {
+  color: $accentColorPrime;
+}

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component Button renders correctly 1`] = `
+<div>
+  <button
+    className="root"
+  >
+    <span
+      className="text"
+    >
+      Button component
+    </span>
+  </button>
+  <button
+    className="root active"
+  >
+    <span
+      className="text"
+    >
+      Button isActive = true
+    </span>
+  </button>
+</div>
+`;
