@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Page from '../../components/Page'
 import SEO from '../../components/SEO'
 
-export default ({ data }) => (
+const FourOhFourPage = ({ data }) => (
   <Page title={data.site.siteMetadata.title}>
     <SEO
       title={`404 Page not found`}
@@ -18,8 +18,10 @@ export default ({ data }) => (
   </Page>
 )
 
-export const pageQuery = graphql`
-  query {
+export default FourOhFourPage
+
+export const query = graphql`
+  {
     site {
       siteMetadata {
         author

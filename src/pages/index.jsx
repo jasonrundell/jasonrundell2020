@@ -5,22 +5,21 @@ import Components from '../components'
 
 import { edgesToObject } from '../utils/graphql'
 
-const {
-  Layout,
-  Links,
-  Page,
-  Positions,
-  References,
-  Section,
-  SEO,
-  Skills,
-  Typography,
-} = Components
-const { Box, Container, Row, Spacer } = Layout
-const { Title, Paragraph } = Typography
-const { ExternalLink } = Links
-
-export default ({ data }) => {
+const HomePage = ({ data }) => {
+  const {
+    Layout,
+    Links,
+    Page,
+    Positions,
+    References,
+    Section,
+    SEO,
+    Skills,
+    Typography,
+  } = Components
+  const { Box, Container, Row, Spacer } = Layout
+  const { Title, Paragraph } = Typography
+  const { ExternalLink } = Links
   const positions = edgesToObject(data.allContentfulPositions.edges)
   const skills = edgesToObject(data.allContentfulSkills.edges)
   const references = edgesToObject(data.allContentfulReferences.edges)
@@ -179,8 +178,10 @@ export default ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query PageHomeQuery {
+export default HomePage
+
+export const query = graphql`
+  {
     site {
       siteMetadata {
         author
@@ -213,7 +214,7 @@ export const pageQuery = graphql`
         node {
           id
           quote {
-            json
+            raw
           }
           citeName
           company

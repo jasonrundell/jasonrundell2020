@@ -5,13 +5,13 @@ import { generatePassword } from '../utils/unique'
 // Components
 import Components from '../components'
 
-const { Layout, Links, Page, Section, SEO, Typography, Button } = Components
-const { Box, Container, Row, Spacer } = Layout
-const { Title, Paragraph } = Typography
-const { ExternalLink } = Links
-const GeneratePassword = generatePassword
+const PasswordPage = ({ data }) => {
+  const { Layout, Links, Page, Section, SEO, Typography, Button } = Components
+  const { Box, Container, Row, Spacer } = Layout
+  const { Title, Paragraph } = Typography
+  const { ExternalLink } = Links
+  const GeneratePassword = generatePassword
 
-export default ({ data }) => {
   const thePasswordLength = 24
 
   const [thePassword, setThePassword] = useState(thePasswordLength)
@@ -100,8 +100,10 @@ export default ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query PagePasswordQuery {
+export default PasswordPage
+
+export const query = graphql`
+  {
     site {
       siteMetadata {
         author
