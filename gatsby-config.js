@@ -21,17 +21,12 @@ module.exports = {
     `gatsby-plugin-react-axe`,
     `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      resolve: "@sentry/gatsby",
       options: {
-        openAnalyzer: true,
+        dsn: process.env.SENTRY_DSN,
       },
     },
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        data: `@import "./src/styles/main.scss";`,
-      },
-    },
+    'gatsby-plugin-sass',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -75,13 +70,6 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
-    {
-      resolve: `gatsby-plugin-load-script`,
-      options: {
-        disable: !process.env.SENTRY_DSN, // When do you want to disable it ?
-        src: process.env.SENTRY_SRC,
-        onLoad: `() => Sentry.init({dsn:"${process.env.SENTRY_DSN}"})`,
-      },
-    },
+    'gatsby-plugin-webpack-bundle-analyser-v2'
   ],
 }
