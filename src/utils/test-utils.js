@@ -7,7 +7,7 @@ export function catchWarnings() {
     global.console.error = (...args) => {
       const propTypeFailures = [/Warning:/] // e.g. [/Invalid prop/, /Failed prop type/]
 
-      if (propTypeFailures.some(p => p.test(args[0]))) {
+      if (propTypeFailures.some((p) => p.test(args[0]))) {
         throw new Error(args[0])
       }
 

@@ -28,7 +28,7 @@ function toCamelCase(string) {
  *  @param {string} string
  */
 function toPascalCase(string) {
-  return toCamelCase(string.replace(/^[a-z]/, $0 => $0.toUpperCase()))
+  return toCamelCase(string.replace(/^[a-z]/, ($0) => $0.toUpperCase()))
 }
 
 export { toCamelCase, toPascalCase }
