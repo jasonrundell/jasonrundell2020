@@ -5,7 +5,7 @@ import Rules from './prop-rules'
 
 import { classNames } from '../../../utils/css'
 
-import styles from './Grid.module.scss'
+import { root } from './Grid.module.scss'
 
 const { columnRules, breakInsideRules } = Rules
 

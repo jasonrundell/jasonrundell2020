@@ -5,7 +5,7 @@ import Rules from './prop-rules'
 
 import { classNames } from '../../../utils/css'
 
-import styles from './Row.module.scss'
+import { root } from './Row.module.scss'
 
 const { justifyRules } = Rules
 

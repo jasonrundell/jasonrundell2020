@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 import { classNames } from '../../../utils/css'
 
-import styles from './UnorderedList.module.scss'
+import { root, horizontal, listItem } from './UnorderedList.module.scss'
 
 const UnorderedList = ({ list, children, isHorizontal }) => {
-  const classes = classNames(styles.root, isHorizontal && styles.horizontal)
+  const classes = classNames(root, isHorizontal && horizontal)
   return (
     <ul className={classes}>
       {list.map((item, index) => (
-        <li className={styles.listItem} key={index}>
+        <li className={listItem} key={index}>
           {item}
           {children}
         </li>

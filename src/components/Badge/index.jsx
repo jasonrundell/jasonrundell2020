@@ -6,12 +6,12 @@ import Layout from '../Layout'
 import { classNames } from '../../utils/css'
 
 // CSS
-import styles from './Badge.module.scss'
+import { root, inverse as inverseStyle } from './Badge.module.scss'
 
 const { Box } = Layout
 
 const Badge = ({ icon, isInverse }) => {
-  const classes = classNames(styles.root, isInverse && styles.inverse)
+  const classes = classNames(root, isInverse && inverseStyle)
   return (
     <div className={classes}>
       <Box isTight>{icon}</Box>

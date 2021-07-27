@@ -14,10 +14,10 @@ const { Strong, Paragraph, Title } = Typography
 
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <Strong>{text}</Strong>,
-    [MARKS.ITALIC]: text => <em>{text}</em>,
-    [MARKS.UNDERLINE]: text => <u>{text}</u>,
-    [MARKS.CODE]: text => <code>{text}</code>,
+    [MARKS.BOLD]: (text) => <Strong>{text}</Strong>,
+    [MARKS.ITALIC]: (text) => <em>{text}</em>,
+    [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
+    [MARKS.CODE]: (text) => <code>{text}</code>,
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,

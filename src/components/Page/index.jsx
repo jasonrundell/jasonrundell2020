@@ -10,7 +10,7 @@ import Layout from '../Layout'
 import Links from '../Links'
 import DownloadResumeButton from '../DownloadResumeButton'
 
-import styles from './Page.module.scss'
+import { root } from './Page.module.scss'
 
 const { Paragraph } = Typography
 const { Box, Container } = Layout
@@ -18,7 +18,7 @@ const { ExternalLink } = Links
 
 const Page = ({ children }) => {
   return (
-    <div className={styles.root}>
+    <div className={root}>
       <SkipToMain>Skip to main content</SkipToMain>
       <Header>
         <Container>

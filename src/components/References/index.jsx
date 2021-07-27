@@ -5,24 +5,24 @@ import Blockquote from '../Blockquote'
 import Contentful from '../Contentful'
 
 // CSS
-import styles from './References.module.scss'
-
-const { RichText } = Contentful
+import { list, item, cite } from './References.module.scss'
 
 const References = ({ references }) => {
+  const { RichText } = Contentful
+
   return (
     <>
-      <ul className={styles.list}>
-        {references.map(reference => {
+      <ul className={list}>
+        {references.map((reference) => {
           const { id, citeName, company } = reference
-          const quote = reference.quote.json
+          const quote = reference.quote.raw
 
           return (
-            <li key={id} className={styles.item}>
+            <li key={id} className={item}>
               <Blockquote>
                 <RichText>{quote}</RichText>
               </Blockquote>
-              <cite className={styles.cite}>
+              <cite className={cite}>
                 - {citeName} ({company})
               </cite>
             </li>

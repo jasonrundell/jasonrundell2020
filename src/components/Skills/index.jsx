@@ -6,7 +6,7 @@ import Typography from '../Typography'
 import { onlyUnique } from '../../utils/unique'
 
 // CSS
-import styles from './Skills.module.scss'
+import { list, item, itemText } from './Skills.module.scss'
 
 const { Box, Grid, Row } = Layout
 const { Title } = Typography
@@ -33,17 +33,17 @@ const Skills = ({ skills }) => {
         >
           {uniqueCategories.map((parentCategory, index) => {
             return (
-              <div key={index} className={styles.list}>
+              <div key={index} className={list}>
                 <Title level={2}>{parentCategory}</Title>
-                <ul className={styles.list}>
+                <ul className={list}>
                   {skills.map((item) => {
                     const { id, name, category } = item
 
                     if (parentCategory === category) {
                       return (
-                        <li key={id} className={styles.item}>
+                        <li key={id} className={item}>
                           <Box isTight>
-                            <span className={styles.itemText}>{name}</span>
+                            <span className={itemText}>{name}</span>
                           </Box>
                         </li>
                       )

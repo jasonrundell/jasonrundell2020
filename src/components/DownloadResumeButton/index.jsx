@@ -1,15 +1,21 @@
 import React from 'react'
 
 // CSS
-import styles from './DownloadResumeButton.module.scss'
+import {
+  root,
+  text,
+  arrowIcon,
+  arrowIconCircle,
+  arrowIconArrow,
+} from './DownloadResumeButton.module.scss'
 
 const DownloadResumeButton = () => {
   return (
     <div style={{ width: '100%', textAlign: 'right' }}>
-      <a href="/jason-rundell-web-developer-resume.pdf" className={styles.root}>
-        <span className={styles.text}>Download résumé</span>
+      <a href="/jason-rundell-web-developer-resume.pdf" className={root}>
+        <span className={text}>Download résumé</span>
         <svg
-          className={styles.arrowIcon}
+          className={arrowIcon}
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
@@ -23,13 +29,13 @@ const DownloadResumeButton = () => {
             strokeMiterlimit="10"
           >
             <circle
-              className={styles.arrowIconCircle}
+              className={arrowIconCircle}
               cx="16"
               cy="16"
               r="14.12"
             ></circle>
             <path
-              className={styles.arrowIconArrow}
+              className={arrowIconArrow}
               d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
             ></path>
           </g>

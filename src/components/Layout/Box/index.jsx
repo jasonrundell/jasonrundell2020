@@ -3,14 +3,10 @@ import PropTypes from 'prop-types'
 
 import { classNames } from '../../../utils/css'
 
-import styles from './Box.module.scss'
+import { root, tight, roomy } from './Box.module.scss'
 
 const Box = ({ children, isTight, isRoomy }) => {
-  const classes = classNames(
-    styles.root,
-    isTight && styles.tight,
-    isRoomy && styles.roomy
-  )
+  const classes = classNames(root, isTight && tight, isRoomy && roomy)
   return <div className={classes}>{children}</div>
 }
 

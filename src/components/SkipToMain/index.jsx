@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './SkipToMain.module.scss'
+import { root } from './SkipToMain.module.scss'
 
 const SkipToMain = ({ children }) => (
-  <a href="#main" className={styles.root}>
+  <a href="#main" className={root}>
     {children}
   </a>
 )

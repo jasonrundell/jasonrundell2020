@@ -6,7 +6,7 @@ import Rules from './prop-rules'
 import { classNames } from '../../../utils/css'
 import { toCamelCase } from '../../../utils/format'
 
-import styles from './Spacer.module.scss'
+import { root } from './Spacer.module.scss'
 
 const { heightRules } = Rules
 
