@@ -2,36 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Blockquote from '../Blockquote'
-import Contentful from '../Contentful'
+import { RichText } from '../Contentful'
 
 // CSS
 import { list, item, cite } from './References.module.scss'
 
-const References = ({ references }) => {
-  const { RichText } = Contentful
-
-  return (
-    <>
-      <ul className={list}>
-        {references.map((reference) => {
-          const { id, citeName, company } = reference
-          const quote = reference.quote.raw
-
-          return (
-            <li key={id} className={item}>
-              <Blockquote>
-                <RichText>{quote}</RichText>
-              </Blockquote>
-              <cite className={cite}>
-                - {citeName} ({company})
-              </cite>
-            </li>
-          )
-        })}
-      </ul>
-    </>
-  )
-}
+const References = ({ references }) => (
+  <ul className={list}>
+    {references.map((reference) => {
+      const { id, citeName, company } = reference
+      const quote = JSON.parse(reference.quote.raw)
+      return (
+        <li key={id} className={item}>
+          <Blockquote>
+            <RichText>{quote}</RichText>
+          </Blockquote>
+          <cite className={cite}>
+            - {citeName} ({company})
+          </cite>
+        </li>
+      )
+    })}
+  </ul>
+)
 
 References.propTypes = {
   references: PropTypes.arrayOf(
