@@ -8,4 +8,4 @@ const heightRules = [
   'largest',
 ]
 
-export default { heightRules }
+export { heightRules }

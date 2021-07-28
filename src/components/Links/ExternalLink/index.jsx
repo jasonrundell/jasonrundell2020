@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './ExternalLink.module.scss'
+import { root } from './ExternalLink.module.scss'
 
 const ExternalLink = ({ url, rel, target, children }) => {
   return (
-    <a href={url} rel={rel} target={target} className={styles.root}>
+    <a href={url} rel={rel} target={target} className={root}>
       {children}
     </a>
   )

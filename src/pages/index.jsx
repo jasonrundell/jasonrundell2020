@@ -1,32 +1,30 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Components from '../components'
-
-import { edgesToObject } from '../utils/graphql'
-
-const {
+import {
   Layout,
   Links,
   Page,
   Positions,
   References,
   Section,
-  SEO,
+  Seo,
   Skills,
   Typography,
-} = Components
-const { Box, Container, Row, Spacer } = Layout
-const { Title, Paragraph } = Typography
-const { ExternalLink } = Links
+} from '../components'
 
-export default ({ data }) => {
+import { edgesToObject } from '../utils/graphql'
+
+const HomePage = ({ data }) => {
+  const { Box, Container, Row, Spacer } = Layout
+  const { Title, Paragraph } = Typography
+  const { ExternalLink } = Links
   const positions = edgesToObject(data.allContentfulPositions.edges)
   const skills = edgesToObject(data.allContentfulSkills.edges)
   const references = edgesToObject(data.allContentfulReferences.edges)
   return (
     <Page title={data.site.siteMetadata.site_header}>
-      <SEO
+      <Seo
         title={`Jason Rundell - Full Stack Toronto Web Developer | Home | Home`}
         description={`The official web site of Jason Rundell: A full stack web developer that loves the web!`}
         author={data.site.siteMetadata.author}
@@ -179,8 +177,10 @@ export default ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query PageHomeQuery {
+export default HomePage
+
+export const query = graphql`
+  {
     site {
       siteMetadata {
         author
@@ -213,7 +213,7 @@ export const pageQuery = graphql`
         node {
           id
           quote {
-            json
+            raw
           }
           citeName
           company

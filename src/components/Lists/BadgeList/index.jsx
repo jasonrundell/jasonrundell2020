@@ -2,20 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Badge from '../../Badge'
-import Layout from '../../Layout'
+import { Box } from '../../Layout'
 
 import { classNames } from '../../../utils/css'
 
-import styles from './BadgeList.module.scss'
-
-const { Box } = Layout
+import { root, horizontal, listItem } from './BadgeList.module.scss'
 
 const BadgeList = ({ list, isHorizontal, isInverse }) => {
-  const classes = classNames(styles.root, isHorizontal && styles.horizontal)
+  const classes = classNames(root, isHorizontal && horizontal)
   return (
     <ul className={classes}>
       {list.map((item) => (
-        <li className={styles.listItem} key={item.id}>
+        <li className={listItem} key={item.id}>
           <Box isTight>
             <Badge icon={item.icon} isInverse={isInverse} />
           </Box>

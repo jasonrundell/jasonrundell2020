@@ -1,8 +1,8 @@
-export const onlyUnique = (value, index, self) => {
+const onlyUnique = (value, index, self) => {
   return self.indexOf(value) === index
 }
 
-export const generatePassword = ({
+const generatePassword = ({
   passwordLength = 16,
   charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=~`',
 }) => {
@@ -13,4 +13,4 @@ export const generatePassword = ({
   return retVal
 }
 
-export default { onlyUnique, generatePassword }
+export { onlyUnique, generatePassword }

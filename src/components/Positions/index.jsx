@@ -1,24 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Typography from '../Typography'
+import { Title } from '../Typography'
 
-import styles from './Positions.module.scss'
-
-const { Title } = Typography
+import {
+  list,
+  item,
+  company as companyStyle,
+  startDate as startDateStyle,
+  endDate as endDateStyle,
+} from './Positions.module.scss'
 
 const Positions = ({ positions }) => {
   return (
-    <ul className={styles.list}>
+    <ul className={list}>
       {positions.map((position) => {
         const { id, role, company, startDate, endDate } = position
         return (
-          <li key={id} className={styles.item}>
+          <li key={id} className={item}>
             <Title level={2}>{role}</Title>
-            <span className={styles.company}>{company}</span>
+            <span className={companyStyle}>{company}</span>
             <br />
-            <span className={styles.startDate}>{startDate}</span> -{' '}
-            <span className={styles.endDate}>{endDate}</span>
+            <span className={startDateStyle}>{startDate}</span> -{' '}
+            <span className={endDateStyle}>{endDate}</span>
           </li>
         )
       })}

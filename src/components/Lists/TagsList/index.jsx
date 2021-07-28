@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 import Tag from '../../Tag'
 
-import styles from './TagsList.module.scss'
+import { root, listItem } from './TagsList.module.scss'
 
 const TagsList = ({ list, orderBy }) => {
   // TODO: Array sort
   return (
-    <ul className={styles.root}>
+    <ul className={root}>
       {list.map((item, index) => (
-        <li className={styles.listItem} key={index}>
+        <li className={listItem} key={index}>
           <Tag text={item} />
         </li>
       ))}

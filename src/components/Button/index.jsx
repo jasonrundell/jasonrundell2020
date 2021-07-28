@@ -3,13 +3,17 @@ import PropTypes from 'prop-types'
 
 import { classNames } from '../../utils/css'
 
-import styles from './Button.module.scss'
+import {
+  root,
+  active as activeStyle,
+  text as textStyle,
+} from './Button.module.scss'
 
 const Button = ({ children, onClick, isActive }) => {
-  const rootClasses = classNames(styles.root, isActive && styles.active)
+  const rootClasses = classNames(root, isActive && activeStyle)
   return (
     <button onClick={onClick} className={rootClasses}>
-      <span className={styles.text}>{children}</span>
+      <span className={textStyle}>{children}</span>
     </button>
   )
 }

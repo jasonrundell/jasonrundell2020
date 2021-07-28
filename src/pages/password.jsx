@@ -3,15 +3,22 @@ import { graphql } from 'gatsby'
 import { generatePassword } from '../utils/unique'
 
 // Components
-import Components from '../components'
+import {
+  Layout,
+  Links,
+  Page,
+  Section,
+  Seo,
+  Typography,
+  Button,
+} from '../components'
 
-const { Layout, Links, Page, Section, SEO, Typography, Button } = Components
-const { Box, Container, Row, Spacer } = Layout
-const { Title, Paragraph } = Typography
-const { ExternalLink } = Links
-const GeneratePassword = generatePassword
+const PasswordPage = ({ data }) => {
+  const { Box, Container, Row, Spacer } = Layout
+  const { Title, Paragraph } = Typography
+  const { ExternalLink } = Links
+  const GeneratePassword = generatePassword
 
-export default ({ data }) => {
   const thePasswordLength = 24
 
   const [thePassword, setThePassword] = useState(thePasswordLength)
@@ -25,7 +32,7 @@ export default ({ data }) => {
 
   return (
     <Page title={data.site.siteMetadata.site_header}>
-      <SEO
+      <Seo
         title={`Jason Rundell - Full Stack Toronto Web Developer | Home | Home`}
         description={`Password generator I like to use personally because I can trust it :)`}
         author={data.site.siteMetadata.author}
@@ -100,8 +107,10 @@ export default ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query PagePasswordQuery {
+export default PasswordPage
+
+export const query = graphql`
+  {
     site {
       siteMetadata {
         author
