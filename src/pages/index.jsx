@@ -1,22 +1,21 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Components from '../components'
+import {
+  Layout,
+  Links,
+  Page,
+  Positions,
+  References,
+  Section,
+  Seo,
+  Skills,
+  Typography,
+} from '../components'
 
 import { edgesToObject } from '../utils/graphql'
 
 const HomePage = ({ data }) => {
-  const {
-    Layout,
-    Links,
-    Page,
-    Positions,
-    References,
-    Section,
-    SEO,
-    Skills,
-    Typography,
-  } = Components
   const { Box, Container, Row, Spacer } = Layout
   const { Title, Paragraph } = Typography
   const { ExternalLink } = Links
@@ -25,7 +24,7 @@ const HomePage = ({ data }) => {
   const references = edgesToObject(data.allContentfulReferences.edges)
   return (
     <Page title={data.site.siteMetadata.site_header}>
-      <SEO
+      <Seo
         title={`Jason Rundell - Full Stack Toronto Web Developer | Home | Home`}
         description={`The official web site of Jason Rundell: A full stack web developer that loves the web!`}
         author={data.site.siteMetadata.author}
