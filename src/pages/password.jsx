@@ -3,10 +3,17 @@ import { graphql } from 'gatsby'
 import { generatePassword } from '../utils/unique'
 
 // Components
-import Components from '../components'
+import {
+  Layout,
+  Links,
+  Page,
+  Section,
+  Seo,
+  Typography,
+  Button,
+} from '../components'
 
 const PasswordPage = ({ data }) => {
-  const { Layout, Links, Page, Section, SEO, Typography, Button } = Components
   const { Box, Container, Row, Spacer } = Layout
   const { Title, Paragraph } = Typography
   const { ExternalLink } = Links
@@ -25,7 +32,7 @@ const PasswordPage = ({ data }) => {
 
   return (
     <Page title={data.site.siteMetadata.site_header}>
-      <SEO
+      <Seo
         title={`Jason Rundell - Full Stack Toronto Web Developer | Home | Home`}
         description={`Password generator I like to use personally because I can trust it :)`}
         author={data.site.siteMetadata.author}
