@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Page from '../../components/Page'
-import SEO from '../../components/SEO'
+import { Page, Seo } from '../../components'
 
 const FourOhFourPage = ({ data }) => (
   <Page title={data.site.siteMetadata.title}>
-    <SEO
+    <Seo
       title={`404 Page not found`}
       description={`404 Page not found`}
       author={data.site.siteMetadata.author}
