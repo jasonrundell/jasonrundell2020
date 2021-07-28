@@ -2,13 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Badge from '../../Badge'
-import Layout from '../../Layout'
+import { Box } from '../../Layout'
 
 import { classNames } from '../../../utils/css'
 
 import { root, horizontal, listItem } from './BadgeList.module.scss'
-
-const { Box } = Layout
 
 const BadgeList = ({ list, isHorizontal, isInverse }) => {
   const classes = classNames(root, isHorizontal && horizontal)

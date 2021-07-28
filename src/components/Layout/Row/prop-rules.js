@@ -7,4 +7,4 @@ const justifyRules = [
   'spaceEvenly',
 ]
 
-export default { justifyRules }
+export { justifyRules }

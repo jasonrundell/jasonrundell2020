@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Layout from '../Layout'
+import { Box } from '../Layout'
 
 import { classNames } from '../../utils/css'
 
 // CSS
 import { root, inverse as inverseStyle } from './Badge.module.scss'
-
-const { Box } = Layout
 
 const Badge = ({ icon, isInverse }) => {
   const classes = classNames(root, isInverse && inverseStyle)

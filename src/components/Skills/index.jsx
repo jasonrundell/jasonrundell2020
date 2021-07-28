@@ -1,15 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Layout from '../Layout'
-import Typography from '../Typography'
+import { Box, Grid, Row } from '../Layout'
+import { Title } from '../Typography'
 import { onlyUnique } from '../../utils/unique'
 
 // CSS
-import { list, item, itemText } from './Skills.module.scss'
-
-const { Box, Grid, Row } = Layout
-const { Title } = Typography
+import { list, item as itemStyle, itemText } from './Skills.module.scss'
 
 const Skills = ({ skills }) => {
   let categories = []
@@ -41,7 +38,7 @@ const Skills = ({ skills }) => {
 
                     if (parentCategory === category) {
                       return (
-                        <li key={id} className={item}>
+                        <li key={id} className={itemStyle}>
                           <Box isTight>
                             <span className={itemText}>{name}</span>
                           </Box>

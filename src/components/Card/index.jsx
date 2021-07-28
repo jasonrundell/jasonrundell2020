@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { classNames } from '../../utils/css'
 
-import { root } from './Card.module.scss'
+import * as styles from './Card.module.scss'
 
 const Card = ({ children, elevation, isElevationAnimated }) => {
   const classes = classNames(

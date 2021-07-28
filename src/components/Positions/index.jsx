@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Typography from '../Typography'
+import { Title } from '../Typography'
 
 import {
   list,
@@ -10,8 +10,6 @@ import {
   startDate as startDateStyle,
   endDate as endDateStyle,
 } from './Positions.module.scss'
-
-const { Title } = Typography
 
 const Positions = ({ positions }) => {
   return (

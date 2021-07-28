@@ -9,4 +9,4 @@ const breakInsideRules = [
   'initial',
   'unset',
 ]
-export default { columnRules, breakInsideRules }
+export { columnRules, breakInsideRules }

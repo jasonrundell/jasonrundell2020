@@ -5,16 +5,12 @@ import SkipToMain from '../SkipToMain'
 import Header from '../Header'
 import Main from '../Main'
 import Footer from '../Footer'
-import Typography from '../Typography'
-import Layout from '../Layout'
-import Links from '../Links'
+import { Paragraph } from '../Typography'
+import { Box, Container } from '../Layout'
+import { ExternalLink } from '../Links'
 import DownloadResumeButton from '../DownloadResumeButton'
 
 import { root } from './Page.module.scss'
-
-const { Paragraph } = Typography
-const { Box, Container } = Layout
-const { ExternalLink } = Links
 
 const Page = ({ children }) => {
   return (

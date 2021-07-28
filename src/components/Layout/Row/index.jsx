@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Rules from './prop-rules'
+import { justifyRules } from './prop-rules'
 
 import { classNames } from '../../../utils/css'
 
-import { root } from './Row.module.scss'
-
-const { justifyRules } = Rules
+import * as styles from './Row.module.scss'
 
 const Row = ({ justify, children }) => {
   const classes = classNames(styles.root, styles[justify])

@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Rules from './prop-rules'
+import { columnRules, breakInsideRules } from './prop-rules'
 
 import { classNames } from '../../../utils/css'
 
-import { root } from './Grid.module.scss'
-
-const { columnRules, breakInsideRules } = Rules
+import * as styles from './Grid.module.scss'
 
 const Grid = ({
   columnCount,

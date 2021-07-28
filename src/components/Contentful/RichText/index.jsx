@@ -8,9 +8,7 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 /** https://www.contentful.com/developers/docs/tutorials/general/rich-text-and-gatsby/ */
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
-import Typography from '../../Typography'
-
-const { Strong, Paragraph, Title } = Typography
+import { Strong, Paragraph, Title } from '../../Typography'
 
 const options = {
   renderMark: {
