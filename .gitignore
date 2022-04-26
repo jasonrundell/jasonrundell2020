@@ -20,7 +20,6 @@ typings/
 
 # NPM
 .npm
-.npmrc
 
 # Optional eslint cache
 .eslintcache
