@@ -55,7 +55,7 @@ const HomePage = ({ data }) => {
                 web, I have been a part of a wide variety of web projects: from
                 iframes, to Flash, WordPress multisites, jQuery Mobile, custom
                 CMS applications, a Facebook contest platform, React design
-                systems, and now Jamstack with headless CMS iontegration.
+                systems, and now Jamstack with headless CMS integration.
                 Whatever the latest trend is, I’m either deeply involved or
                 experimenting with it in my spare time. My skills and
                 experiences are deep, wide-ranging, and I am always seeking new
