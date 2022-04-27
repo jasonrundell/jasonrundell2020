@@ -30,7 +30,7 @@ References.propTypes = {
   references: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      quote: PropTypes.shape({ json: PropTypes.json }).isRequired,
+      quote: PropTypes.shape({ raw: PropTypes.string }).isRequired,
       citeName: PropTypes.string.isRequired,
       company: PropTypes.string.isRequired,
     })

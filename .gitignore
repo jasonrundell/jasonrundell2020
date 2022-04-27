@@ -48,5 +48,5 @@ yarn-error.log
 .yarn-integrity
 
 # Gatsby
-.cache
-public/
+.cache/
+public

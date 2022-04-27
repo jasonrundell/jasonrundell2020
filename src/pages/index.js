@@ -1,6 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 import { graphql } from 'gatsby'
 
+// components
 import {
   Layout,
   Links,
@@ -15,6 +16,7 @@ import {
 
 import { edgesToObject } from '../utils/graphql'
 
+// markup
 const HomePage = ({ data }) => {
   const { Box, Container, Row, Spacer } = Layout
   const { Title, Paragraph } = Typography
@@ -22,10 +24,11 @@ const HomePage = ({ data }) => {
   const positions = edgesToObject(data.allContentfulPositions.edges)
   const skills = edgesToObject(data.allContentfulSkills.edges)
   const references = edgesToObject(data.allContentfulReferences.edges)
+
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <Seo
-        title={`Jason Rundell - Full Stack Toronto Web Developer | Home | Home`}
+        title={`Jason Rundell - Full Stack Toronto Web Developer | Home`}
         description={`The official web site of Jason Rundell: A full stack web developer that loves the web!`}
         author={data.site.siteMetadata.author}
         lang={data.site.siteMetadata.lang}

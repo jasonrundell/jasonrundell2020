@@ -11,65 +11,49 @@ const contentfulConfig = {
 
 module.exports = {
   siteMetadata: {
-    site_name: `Jason Rundell`,
-    author: `@jasonrundell`,
+    site_name: 'Jason Rundell',
+    author: '@jasonrundell',
+    siteUrl: 'https://jasonrundell.com',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-axe`,
-    `gatsby-plugin-offline`,
     {
-      resolve: "@sentry/gatsby",
-      options: {
-        dsn: process.env.SENTRY_DSN,
-      },
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfig,
     },
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        trackingId: 'UA-3249909-1',
       },
     },
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data`,
+        icon: 'src/images/icon.png',
       },
     },
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `JasonRundell.com`,
-        short_name: `JasonRundell.com`,
-        start_url: `/`,
-        background_color: `#11161d`,
-        theme_color: `#11161d`,
-        display: `standalone`,
-        icon: `src/images/icon192x192.png`, // This path is relative to the root of the site.
+        name: 'images',
+        path: './src/images/',
       },
+      __key: 'images',
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              linkImagesToOriginal: false,
-            },
-          },
-        ],
+        name: 'pages',
+        path: './src/pages/',
       },
+      __key: 'pages',
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
-    },
-    'gatsby-plugin-webpack-bundle-analyser-v2'
   ],
 }

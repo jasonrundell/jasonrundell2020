@@ -13,11 +13,11 @@ cd jasonrundell2020
 ```
 
 ```bash
-npm i
+yarn
 ```
 
 ## Launch site
 
 ```bash
-npm start
+yarn develop
 ```
