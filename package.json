@@ -16,7 +16,6 @@
     "start": "gatsby develop"
   },
   "dependencies": {
-    "@jasonrundell/react-mega-menu": "0.3.0",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "gatsby": "^4.13.0",
