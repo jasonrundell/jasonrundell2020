@@ -9,10 +9,12 @@ import {
   arrowIconArrow,
 } from './DownloadResumeButton.module.scss'
 
+import resumePdf from '../../assets/jason-rundell-web-developer-resume.pdf'
+
 const DownloadResumeButton = () => {
   return (
     <div style={{ width: '100%', textAlign: 'right' }}>
-      <a href={`/jason-rundell-web-developer-resume.pdf`} className={root}>
+      <a href={resumePdf} className={root}>
         <span className={text}>Download résumé</span>
         <svg
           className={arrowIcon}
