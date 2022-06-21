@@ -12,7 +12,7 @@ import {
 const DownloadResumeButton = () => {
   return (
     <div style={{ width: '100%', textAlign: 'right' }}>
-      <a href="/jason-rundell-web-developer-resume.pdf" className={root}>
+      <a href={`/jason-rundell-web-developer-resume.pdf`} className={root}>
         <span className={text}>Download résumé</span>
         <svg
           className={arrowIcon}
