@@ -68,7 +68,16 @@ const HomePage = ({ data }) => {
             </Row>
             <Row>
               <Paragraph>
-                <ExternalLink url="https://github.com/jasonrundell?tab=repositories">
+                🗓️{' '}
+                <ExternalLink url="https://calendly.com/jason-rundell/30min">
+                  Book time with me
+                </ExternalLink>
+              </Paragraph>
+            </Row>
+            <Row>
+              <Paragraph>
+                👀{' '}
+                <ExternalLink url="https://github.com/jasonrundell?tab=repositories&q=&type=&language=&sort=">
                   Check out my open-source work on GitHub
                 </ExternalLink>
               </Paragraph>
