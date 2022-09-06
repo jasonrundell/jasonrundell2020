@@ -52,14 +52,14 @@ const HomePage = ({ data }) => {
                 Amazon Web Services.
               </Paragraph>
               <Paragraph>
-                My love of building web experiences started in my high school’s
-                library in 1997 with GeoCities and it’s been rewarding ever
+                My love of building web experiences started in my high school's
+                library in 1997 with GeoCities and it's been rewarding ever
                 since! As you can imagine, with over 20 years of love for the
                 web, I have been a part of a wide variety of web projects: from
                 iframes, to Flash, WordPress multisites, jQuery Mobile, custom
                 CMS applications, a Facebook contest platform, React design
                 systems, and now Jamstack with headless CMS integration.
-                Whatever the latest trend is, I’m either deeply involved or
+                Whatever the latest trend is, I'm either deeply involved or
                 experimenting with it in my spare time. My skills and
                 experiences are deep, wide-ranging, and I am always seeking new
                 best practices and methodologies. I embrace change, crave
