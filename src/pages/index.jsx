@@ -41,7 +41,7 @@ const HomePage = ({ data }) => {
               <Title>{data.site.siteMetadata.site_name}</Title>
             </Row>
             <Row>
-              <Title level={2}>Full Stack Web Developer</Title>
+              <Title level={2}>Full Stack Web Developer (for hire!)</Title>
             </Row>
             <Row>
               <Paragraph>
@@ -64,6 +64,10 @@ const HomePage = ({ data }) => {
                 experiences are deep, wide-ranging, and I am always seeking new
                 best practices and methodologies. I embrace change, crave
                 challenge, and love technology!
+              </Paragraph>
+              <Paragraph>
+                <strong>I am currently looking for work!</strong> Full-time and
+                hybrid or 100% remote preferred.
               </Paragraph>
             </Row>
             <Row>
