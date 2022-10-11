@@ -41,7 +41,7 @@ const HomePage = ({ data }) => {
               <Title>{data.site.siteMetadata.site_name}</Title>
             </Row>
             <Row>
-              <Title level={2}>Full Stack Web Developer (for hire!)</Title>
+              <Title level={2}>Full Stack Web Developer</Title>
             </Row>
             <Row>
               <Paragraph>
