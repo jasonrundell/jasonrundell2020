@@ -65,10 +65,6 @@ const HomePage = ({ data }) => {
                 best practices and methodologies. I embrace change, crave
                 challenge, and love technology!
               </Paragraph>
-              <Paragraph>
-                <strong>I am currently looking for work!</strong> Full-time and
-                hybrid or 100% remote preferred.
-              </Paragraph>
             </Row>
             <Row>
               <Paragraph>
