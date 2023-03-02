@@ -45,25 +45,24 @@ const HomePage = ({ data }) => {
             </Row>
             <Row>
               <Paragraph>
-                Hello. I'm a developer who loves learning and using the latest
-                in front end web development. My skill set includes experience
-                with React, Gatsby, AEM, Contentful, WordPress, Git, Gulp,
-                Grunt, Parcel, PHP, MySQL, SASS, CSS, HTML, JavaScript, and
-                Amazon Web Services.
+                I'm a developer who loves learning and using the latest in front
+                end web development. My skill set includes experience with
+                Docker, React, NextJS, Gatsby, Contentful, PHP, MySQL, SASS,
+                CSS, HTML, JavaScript, and Amazon Web Services.
               </Paragraph>
               <Paragraph>
-                My love of building web experiences started in my high school's
-                library in 1997 with GeoCities and it's been rewarding ever
-                since! As you can imagine, with over 20 years of love for the
-                web, I have been a part of a wide variety of web projects: from
-                iframes, to Flash, WordPress multisites, jQuery Mobile, custom
-                CMS applications, a Facebook contest platform, React design
-                systems, and now Jamstack with headless CMS integration.
-                Whatever the latest trend is, I'm either deeply involved or
-                experimenting with it in my spare time. My skills and
-                experiences are deep, wide-ranging, and I am always seeking new
-                best practices and methodologies. I embrace change, crave
-                challenge, and love technology!
+                My passion for creating web experiences began in my high
+                school's library back in 1997 when I discovered GeoCities. Since
+                then, I've been fortunate to work on a diverse range of projects
+                spanning multiple technologies, including iframes, Flash,
+                WordPress multisites, jQuery Mobile, custom CMS applications, a
+                Facebook contest platform, React design systems, Jamstack
+                architecture, and most recently, exploration of the
+                possibilities and limitations of AI and genrative art. I am
+                constantly exploring new trends and experimenting with emerging
+                technologies in my spare time to expand my skills and knowledge.
+                As a lifelong learner, I embrace change, seek out challenges,
+                and thrive on the fast-paced nature of the tech industry.
               </Paragraph>
             </Row>
             <Row>
@@ -180,7 +179,15 @@ const HomePage = ({ data }) => {
                     LinkedIn
                   </ExternalLink>
                 </li>
-                <li><ExternalLink rel="me" url="https://mastodon.jasonrundell.com/@jason" target="_blank">Mastodon</ExternalLink></li>
+                <li>
+                  <ExternalLink
+                    rel="me"
+                    url="https://mastodon.jasonrundell.com/@jason"
+                    target="_blank"
+                  >
+                    Mastodon
+                  </ExternalLink>
+                </li>
               </ul>
             </Row>
           </Box>
