@@ -58,7 +58,7 @@ const HomePage = ({ data }) => {
                 WordPress multisites, jQuery Mobile, custom CMS applications, a
                 Facebook contest platform, React design systems, Jamstack
                 architecture, and most recently, exploration of the
-                possibilities and limitations of AI and genrative art. I am
+                possibilities and limitations of AI and generative art. I am
                 constantly exploring new trends and experimenting with emerging
                 technologies in my spare time to expand my skills and knowledge.
                 As a lifelong learner, I embrace change, seek out challenges,
