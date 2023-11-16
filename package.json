@@ -7,11 +7,10 @@
     "gatsby"
   ],
   "scripts": {
-    "build": "npm run test && gatsby build",
+    "build": "gatsby build",
     "clean": "gatsby clean",
     "format": "prettier --write src/**/*.{js,jsx}",
     "develop": "gatsby develop",
-    "test": "echo \"Write tests!",
     "newtest": "jest -u",
     "serve": "gatsby serve",
     "start": "gatsby develop"
