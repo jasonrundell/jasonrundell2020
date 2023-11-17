@@ -39,7 +39,15 @@ const Page = ({ children }) => {
                     Donna Vitan
                   </ExternalLink>
                   ❤️. Jason Rundell © {new Date().getFullYear()}. All rights
-                  reserved.
+                  reserved. Hosted on{' '}
+                  <ExternalLink
+                    url="https://vercel.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Vercel
+                  </ExternalLink>
+                  .
                 </small>
               </Paragraph>
             </Box>
