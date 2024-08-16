@@ -82,7 +82,7 @@ const HomePage = ({ data }) => {
             <Row>
               <Paragraph>
                 🗓️{' '}
-                <ExternalLink url="https://calendly.com/jason-rundell/30min">
+                <ExternalLink url="https://calendly.com/jason-rundell/60-minute-meeting">
                   Book time with me
                 </ExternalLink>
               </Paragraph>
