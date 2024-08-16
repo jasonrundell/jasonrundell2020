@@ -16,13 +16,7 @@ const Page = ({ children }) => {
   return (
     <div className={root}>
       <SkipToMain>Skip to main content</SkipToMain>
-      <Header>
-        <Container>
-          <Box>
-            <DownloadResumeButton />
-          </Box>
-        </Container>
-      </Header>
+      <Header />
       <Main>{children}</Main>
       <div className="background__prime--darker">
         <Footer>
