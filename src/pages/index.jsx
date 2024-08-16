@@ -28,7 +28,7 @@ const HomePage = ({ data }) => {
   return (
     <Page title={data.site.siteMetadata.site_header}>
       <Seo
-        title={`Jason Rundell - Engineering Manager / Full Stack Web Developer`}
+        title={`Jason Rundell - Full Stack Web Developer and Manager`}
         description={`The official web site of Jason Rundell: A full stack web developer that loves the web!`}
         author={data.site.siteMetadata.author}
         lang={data.site.siteMetadata.lang}
