@@ -193,15 +193,6 @@ const HomePage = ({ data }) => {
                     LinkedIn
                   </ExternalLink>
                 </li>
-                <li>
-                  <ExternalLink
-                    rel="me"
-                    url="https://mastodon.jasonrundell.com/@jason"
-                    target="_blank"
-                  >
-                    Mastodon
-                  </ExternalLink>
-                </li>
               </ul>
             </Row>
           </Box>
